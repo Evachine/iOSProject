@@ -108,6 +108,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.98627614263421648" green="0.99215203610707026" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="5le-iV-Stk" eventType="touchUpInside" id="RaV-en-Pfk"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lB4-Cc-isx">
                                 <rect key="frame" x="87" y="254" width="200" height="30"/>

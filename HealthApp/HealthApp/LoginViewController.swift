@@ -15,6 +15,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      emailText.delegate = self
+      passwordText.delegate = self
+      
+      passwordText.isSecureTextEntry = true
 
         // Do any additional setup after loading the view.
     }
@@ -25,18 +30,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
    
    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-      print("editing text")
-      
       return true
    }
    
    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
       if (textField == emailText) {
          print("Email: \(textField.text)")
+         
+         emailText.text = textField.text
       }
       
       if (textField == passwordText) {
          print("PW: \(textField.text)")
+         
+         passwordText.text = textField.text
       }
       
       textField.resignFirstResponder()
@@ -44,6 +51,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       return true
    }
 
+   
+   @IBAction func loginButtonPressed(_ sender: UIButton) {
+      
+      print(emailText.text!)
+      print(passwordText.text!)
+
+      
+   }
+   
+   
     /*
     // MARK: - Navigation
 
