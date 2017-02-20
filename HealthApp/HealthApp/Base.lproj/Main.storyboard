@@ -133,6 +133,9 @@
                                 <state key="normal" title="Sign up.">
                                     <color key="titleColor" red="0.60999044329999996" green="0.72167353739999995" blue="0.95542512690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="5le-iV-Stk" eventType="touchUpInside" id="ILX-jc-bNw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

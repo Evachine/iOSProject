@@ -65,6 +65,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    }
    
    
+   @IBAction func signUpButtonPressed(_ sender: UIButton) {
+   }
+   
+   
     /*
     // MARK: - Navigation
 
