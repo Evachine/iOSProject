@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -56,6 +58,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       
       print(emailText.text!)
       print(passwordText.text!)
+      
+      
 
       
    }
