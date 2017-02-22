@@ -19,6 +19,7 @@
 		6CB51B721E5394BB00EB40A3 /* HealthAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B711E5394BB00EB40A3 /* HealthAppTests.swift */; };
 		6CB51B7D1E5394BB00EB40A3 /* HealthAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B7C1E5394BB00EB40A3 /* HealthAppUITests.swift */; };
 		6CB51B8B1E53965D00EB40A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CB51B8A1E53965D00EB40A3 /* GoogleService-Info.plist */; };
+		A44BA7101E5D518B0005E47D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BA70F1E5D518B0005E47D /* SignUpViewController.swift */; };
 		DC2A2ED5D82207F95C3A0462 /* Pods_HealthAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A05C9E24BD967DBB5C3B635 /* Pods_HealthAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		8D77862B963C3D37A3BD1ED6 /* Pods-HealthAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthAppUITests/Pods-HealthAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9429B8950135BFDA5327FBF4 /* Pods-HealthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthApp/Pods-HealthApp.release.xcconfig"; sourceTree = "<group>"; };
 		9A05C9E24BD967DBB5C3B635 /* Pods_HealthAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44BA70F1E5D518B0005E47D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EC829C17FB8A4856817D7D8C /* Pods_HealthAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 				6CB51B8A1E53965D00EB40A3 /* GoogleService-Info.plist */,
 				6CB51B681E5394BB00EB40A3 /* Info.plist */,
 				6C94B6081E53A12E00697D59 /* LoginViewController.swift */,
+				A44BA70F1E5D518B0005E47D /* SignUpViewController.swift */,
 			);
 			path = HealthApp;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				6CB51B5F1E5394BB00EB40A3 /* SecondViewController.swift in Sources */,
 				6CB51B5B1E5394BB00EB40A3 /* AppDelegate.swift in Sources */,
 				6CB51B5D1E5394BB00EB40A3 /* FirstViewController.swift in Sources */,
+				A44BA7101E5D518B0005E47D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
