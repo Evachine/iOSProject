@@ -16,6 +16,11 @@ class TimerViewController: UIViewController {
     private var minute_counter = 0
     private var hour_counter = 0
     @IBOutlet var timerLabel: UILabel!
+   
+   @IBOutlet weak var PauseResetBtn: UIButton!
+   
+   private var startPressed: Bool = false //true
+   private var pausePressed: Bool = false //true
     
     @IBAction func startAction(_ sender: Any) {
         // TODO: Don't allow timer to be "started" again once already started. Currently just speeds up the time
@@ -24,21 +29,60 @@ class TimerViewController: UIViewController {
         // We want there to only be two buttons: A Start button and a Pause/Reset button.
         //   When Start is pressed, Pause/Reset button should be "Pause" and Start should become disabled
         //   When Pause is pressed, Pause/Reset button should be "Reset"
+      
+      if (startPressed == false) {
+         
+         print("Start pressed for the first time")
+         
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(TimerViewController.updateCounter), userInfo: nil, repeats: true)
+         
+         startPressed = true
+         
+        /* DispatchQueue.main.async {
+            self.PauseResetBtn.setTitle("Pause", for: .normal)
+         }*/
+   
+      }
+      else {
+         print("START pressed, change to PAUSE")
+         // Start was pressed again, must resume the paused time
+         timer.invalidate()
+         pausePressed = false // display pause
+         
+         DispatchQueue.main.async {
+            self.PauseResetBtn.setTitle("Pause", for: .normal)
+         }
+      }
     }
     
-    @IBAction func pauseAction(_ sender: Any) {
+  /*  @IBAction func pauseAction(_ sender: Any) {
         timer.invalidate()
-    }
-    
-    @IBAction func resetAction(_ sender: Any) {
-        timer.invalidate()
-        millisecond_counter = 0
-        second_counter = 0
-        minute_counter = 0
-        hour_counter = 0
-        timerLabel.text = String(format: "%02d", hour_counter) + ":" + String(format: "%02d", minute_counter) + ":" + String(format: "%02d", second_counter)
-    }
+    }*/
+   
+   
+   @IBAction func pauseResetAction(_ sender: Any) {
+      if (pausePressed == false) {
+         timer.invalidate()
+         pausePressed = true
+         
+         print("PAUSE pressed, change to RESET")
+         DispatchQueue.main.async{
+            self.PauseResetBtn.setTitle("Reset", for: .normal)
+         }
+      }
+      else {
+         
+         print("RESET pressed, change to PAUSE")
+         timer.invalidate()
+         millisecond_counter = 0
+         second_counter = 0
+         minute_counter = 0
+         hour_counter = 0
+         timerLabel.text = String(format: "%02d", hour_counter) + ":" + String(format: "%02d", minute_counter) + ":" + String(format: "%02d", second_counter)
+      }
+
+   }
+
     
     func updateCounter() {
         timerLabel.text = String(format: "%02d", hour_counter) + ":" + String(format: "%02d", minute_counter) + ":" + String(format: "%02d", second_counter)
@@ -62,6 +106,10 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+    /*  if (hasStarted == false) {
+         startPauseButton.titleLabel?.text = "Start"
+      }*/
         // Do any additional setup after loading the view, typically from a nib.
         
         timerLabel.text = String(format: "%02d", hour_counter) + ":" + String(format: "%02d", minute_counter) + ":" + String(format: "%02d", second_counter)
