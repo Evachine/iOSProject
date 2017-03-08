@@ -24,9 +24,6 @@ class SignUpViewController: UIViewController {
         // TODO: Add functionality!
         
         performSegue(withIdentifier: "doneSigningUpPressed", sender: sender)
-        
-        
     }
-    
 }
 

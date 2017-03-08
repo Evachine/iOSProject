@@ -1,5 +1,5 @@
 //
-//  SevenDaysController.swift
+//  WorkoutController.swift
 //  HealthApp
 //
 //  Created by Emily K. Nguyen on 2/14/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SevenDaysController: UIViewController {
+class WorkoutViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -19,7 +19,5 @@ class SevenDaysController: UIViewController {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
    }
-
-
 }
 

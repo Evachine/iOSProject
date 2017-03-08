@@ -1,5 +1,5 @@
 //
-//  UserProfileController.swift
+//  FavoritesController.swift
 //  HealthApp
 //
 //  Created by Emily K. Nguyen on 2/14/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserProfileController: UIViewController {
+class FavoritesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,15 +18,6 @@ class UserProfileController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func favoritesIsPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "favoritesIsPressed", sender: sender)
-        print("YAYYY")
-    }
-    
-    @IBAction func unwindToUserProfile(segue: UIStoryboardSegue) {
-        
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  WorkoutController.swift
+//  SevenDaysController.swift
 //  HealthApp
 //
 //  Created by Emily K. Nguyen on 2/14/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WorkoutController: UIViewController {
+class SevenDaysViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -19,14 +19,7 @@ class WorkoutController: UIViewController {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
    }
-    
-    @IBAction func showTimer(_ sender: UIButton) {
-        performSegue(withIdentifier: "showTimerController", sender: sender)
-    }
 
-    
-    @IBAction func unwindToWorkout(segue: UIStoryboardSegue) {
-        
-    }
+
 }
 

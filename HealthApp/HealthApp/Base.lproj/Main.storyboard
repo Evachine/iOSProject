@@ -9,235 +9,241 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SevenDays Controller-->
-        <scene sceneID="wg7-f3-ORb">
+        <!--7 Days-->
+        <scene sceneID="bOP-Ki-FJz">
             <objects>
-                <viewController id="8rJ-Kc-sve" userLabel="SevenDays Controller" customClass="SevenDaysController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U2q-DA-Td9" userLabel="7 Days" customClass="SevenDaysViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                        <viewControllerLayoutGuide type="top" id="mHf-BI-shf"/>
+                        <viewControllerLayoutGuide type="bottom" id="qWr-ZW-x9l"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                    <view key="view" contentMode="scaleToFill" id="RDH-pb-tWI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="SevenDays" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="95" y="313" width="185" height="42"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="188" y="363" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="7Days" image="second" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="-234"/>
-        </scene>
-        <!--Home Controller-->
-        <scene sceneID="cjB-0n-xtb">
-            <objects>
-                <viewController id="hbi-15-1Jc" userLabel="Home Controller" customClass="HomeController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="h8x-6R-1YX"/>
-                        <viewControllerLayoutGuide type="bottom" id="mpj-cl-OlS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="L0c-iP-19e">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="FaB-9L-SW2">
-                                <rect key="frame" x="139" y="312" width="97" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="4YI-1P-tWn"/>
+                    <navigationItem key="navigationItem" title="Next 7 Days" id="vRB-Q1-BgE"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L8T-9l-lbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pa6-Z2-0cD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="475"/>
+            <point key="canvasLocation" x="2033" y="-210"/>
+        </scene>
+        <!--Next 7 Days-->
+        <scene sceneID="wSE-Er-Pdv">
+            <objects>
+                <navigationController id="Sl0-Fr-weR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Next 7 Days" id="AjM-4D-qLA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tjY-72-4gh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="U2q-DA-Td9" kind="relationship" relationship="rootViewController" id="ZWa-6w-zRB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6N-mp-7rA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-210"/>
+        </scene>
+        <!--Workout Controller-->
+        <scene sceneID="k4G-q0-9Wv">
+            <objects>
+                <navigationController id="hY3-1x-Z7z" userLabel="Workout Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Workout" id="Buo-et-nVO" userLabel="Workout"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9iu-JW-XxY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eAy-bD-D7a" kind="relationship" relationship="rootViewController" id="Z5g-6d-KM6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icz-e1-kfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-1006"/>
         </scene>
         <!--Workout-->
-        <scene sceneID="N2r-4r-IWW">
+        <scene sceneID="u3y-og-hQj">
             <objects>
-                <viewController id="XHg-rb-J1r" customClass="WorkoutController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eAy-bD-D7a" customClass="WorkoutViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3OL-l9-wwJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="zmU-Sa-osx"/>
+                        <viewControllerLayoutGuide type="top" id="Smc-tO-24v"/>
+                        <viewControllerLayoutGuide type="bottom" id="ryP-hh-g3D"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YyR-2D-fes">
+                    <view key="view" contentMode="scaleToFill" id="Yu5-hj-agm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Workout" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="EXT-2d-Zuy">
-                                <rect key="frame" x="120" y="312" width="134" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onh-Bv-5Lj">
-                                <rect key="frame" x="167" y="362" width="40" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AR-mf-UQx">
+                                <rect key="frame" x="164.30669044689603" y="456" width="40.000000000000227" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Timer"/>
                                 <connections>
-                                    <action selector="showTimer:" destination="XHg-rb-J1r" eventType="touchUpInside" id="1Ef-qv-jFf"/>
-                                    <segue destination="iGz-mS-C5s" kind="show" identifier="showTimerController" id="pLK-Zs-5ES"/>
+                                    <segue destination="CN7-4o-Qqf" kind="show" id="gxn-lM-MRY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Workout" id="7QW-ME-Nki" userLabel="Workout"/>
+                    <navigationItem key="navigationItem" title="Workout" id="1Zh-ne-mHS"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rip-9f-m8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzR-d5-Kx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-935.08245877061472"/>
+            <point key="canvasLocation" x="2032.8" y="-1006.1469265367317"/>
         </scene>
-        <!--Timer Controller-->
-        <scene sceneID="70y-JR-tM5">
+        <!--Timer View Controller-->
+        <scene sceneID="TGe-u4-I2H">
             <objects>
-                <viewController id="iGz-mS-C5s" customClass="TimerController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CN7-4o-Qqf" customClass="TimerViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nty-O8-vUT"/>
-                        <viewControllerLayoutGuide type="bottom" id="ybx-LJ-xww"/>
+                        <viewControllerLayoutGuide type="top" id="Ocr-tP-8XN"/>
+                        <viewControllerLayoutGuide type="bottom" id="5De-kB-Nbo"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gAa-0N-h2e">
+                    <view key="view" contentMode="scaleToFill" id="ItS-N1-b2P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="AiL-op-nrc">
-                                <rect key="frame" x="142" y="312" width="91" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0a-dK-Dip">
+                                <rect key="frame" x="45" y="178" width="284" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFq-cc-lKO">
-                                <rect key="frame" x="22" y="46" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYC-Yj-9Iq">
+                                <rect key="frame" x="51" y="479" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="timerBackIsPressed:" destination="iGz-mS-C5s" eventType="touchUpInside" id="f0T-3o-xJD"/>
+                                    <action selector="startAction:" destination="CN7-4o-Qqf" eventType="touchUpInside" id="839-p1-K2S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iab-We-SeB">
+                                <rect key="frame" x="166" y="479" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseAction:" destination="CN7-4o-Qqf" eventType="touchUpInside" id="lNt-Oz-zvI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6K7-jj-Tmv">
+                                <rect key="frame" x="283" y="479" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="CN7-4o-Qqf" eventType="touchUpInside" id="2t7-X5-D38"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="yp2-OR-jMR" kind="unwind" identifier="unwindToWorkout" unwindAction="unwindToWorkoutWithSegue:" id="tmG-KQ-rYy"/>
+                        <outlet property="timerLabel" destination="d0a-dK-Dip" id="cVS-A1-yHf"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aqC-9S-gVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="yp2-OR-jMR" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XgW-zO-ufc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="-935"/>
+            <point key="canvasLocation" x="3154.4000000000001" y="-1008.8455772113944"/>
         </scene>
-        <!--User Profile Controller-->
-        <scene sceneID="isR-ps-Nbm">
+        <!--Home-->
+        <scene sceneID="Dem-Qe-JD7">
             <objects>
-                <viewController id="Ggy-Ci-au4" userLabel="User Profile Controller" customClass="UserProfileController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="91a-2i-ZD4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="dyc-Eg-WUR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aUo-CM-8X6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lJK-Zz-gQN" kind="relationship" relationship="rootViewController" id="Wva-GA-Rdg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="abd-bb-lws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="511"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="etM-bS-6ZV">
+            <objects>
+                <viewController id="lJK-Zz-gQN" customClass="HomeViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LuJ-8i-bj4"/>
-                        <viewControllerLayoutGuide type="bottom" id="Rgu-BX-jT4"/>
+                        <viewControllerLayoutGuide type="top" id="uj5-27-YAd"/>
+                        <viewControllerLayoutGuide type="bottom" id="x66-gE-0MU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SxL-BL-fFh">
+                    <view key="view" contentMode="scaleToFill" id="iVj-VU-JDZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="tYT-iJ-wwQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwx-4s-VFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2033" y="510"/>
+        </scene>
+        <!--User Profile-->
+        <scene sceneID="qiG-Rv-jjv">
+            <objects>
+                <viewController id="54M-c9-yjb" customClass="UserProfileViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3MT-xH-kLg"/>
+                        <viewControllerLayoutGuide type="bottom" id="bil-nK-8uF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xis-6q-A97">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="UserProfile" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="won-Pu-k3H">
-                                <rect key="frame" x="98" y="312" width="179" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxz-GY-UyV">
-                                <rect key="frame" x="143" y="440" width="90" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUB-Sc-2HG">
+                                <rect key="frame" x="156" y="449" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Favorites"/>
                                 <connections>
-                                    <action selector="favoritesIsPressed:" destination="Ggy-Ci-au4" eventType="touchUpInside" id="VTq-Al-r4n"/>
+                                    <segue destination="gWd-f2-OuL" kind="show" id="Usc-oo-Lls"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="User" id="4ES-th-qyz"/>
-                    <connections>
-                        <segue destination="PVM-VD-ISC" kind="show" identifier="favoritesIsPressed" id="gaJ-kF-0ad"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="User Profile" id="Bxh-ud-50z"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sin-DM-l4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUx-Sg-1G6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="1174.3628185907048"/>
+            <point key="canvasLocation" x="2033" y="1232"/>
         </scene>
-        <!--Favorites Controller-->
-        <scene sceneID="5IY-gv-9ZA">
+        <!--View Controller-->
+        <scene sceneID="FzF-Be-Omh">
             <objects>
-                <viewController id="PVM-VD-ISC" customClass="FavoritesController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gWd-f2-OuL" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Rwm-d9-SGf"/>
-                        <viewControllerLayoutGuide type="bottom" id="GJc-S9-R4T"/>
+                        <viewControllerLayoutGuide type="top" id="ZoL-HU-b97"/>
+                        <viewControllerLayoutGuide type="bottom" id="s23-kK-kiC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="t4k-l7-rQK">
+                    <view key="view" contentMode="scaleToFill" id="nEh-Ta-syh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Gl-3S-QoI">
-                                <rect key="frame" x="113" y="312" width="149" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEY-eN-GMX">
-                                <rect key="frame" x="16" y="70" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="favoritesBackIsPressed:" destination="PVM-VD-ISC" eventType="touchUpInside" id="FGa-Uf-AYa"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="9JG-ov-bjP"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="FVn-2Q-BVW" kind="unwind" identifier="unwindToUserProfile" unwindAction="unwindToUserProfileWithSegue:" id="OgQ-JZ-jal"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C7a-Kd-diu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="FVn-2Q-BVW" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rHd-ph-b5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2032.8" y="1174.3628185907048"/>
+            <point key="canvasLocation" x="3154" y="1232"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="XNa-Ax-Zji">
+            <objects>
+                <navigationController id="Xmo-h5-weJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="iAo-Bl-6qX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x2l-AM-7LZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="54M-c9-yjb" kind="relationship" relationship="rootViewController" id="Unp-TH-L4a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmi-jl-6K2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1232"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="4db-JV-0SP">
@@ -318,6 +324,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done Signing Up!"/>
                                 <connections>
+                                    <action selector="doneSigningUpPressed:" destination="fSY-YJ-wvw" eventType="touchUpInside" id="X70-BS-us8"/>
                                     <segue destination="49e-Tb-3d3" kind="show" identifier="doneSigningUpPressed" id="iVT-cu-jVF"/>
                                 </connections>
                             </button>
@@ -340,10 +347,10 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="hbi-15-1Jc" kind="relationship" relationship="viewControllers" id="OUf-Hx-nsX"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="Ggy-Ci-au4" kind="relationship" relationship="viewControllers" id="8Pd-vm-WX7"/>
-                        <segue destination="XHg-rb-J1r" kind="relationship" relationship="viewControllers" id="MCt-Vw-ZLq"/>
+                        <segue destination="91a-2i-ZD4" kind="relationship" relationship="viewControllers" id="3lp-CI-1GQ"/>
+                        <segue destination="hY3-1x-Z7z" kind="relationship" relationship="viewControllers" id="bl5-pV-Oh2"/>
+                        <segue destination="Sl0-Fr-weR" kind="relationship" relationship="viewControllers" id="nBF-6Q-Z2k"/>
+                        <segue destination="Xmo-h5-weJ" kind="relationship" relationship="viewControllers" id="eIj-N8-WTM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -351,9 +358,6 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="second" width="30" height="30"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="iVT-cu-jVF"/>
     </inferredMetricsTieBreakers>
