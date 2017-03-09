@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,8 +32,8 @@
         <scene sceneID="wSE-Er-Pdv">
             <objects>
                 <navigationController id="Sl0-Fr-weR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Next 7 Days" selectedImage="Week" id="AjM-4D-qLA"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tjY-72-4gh">
+                    <tabBarItem key="tabBarItem" title="Next 7 Days" image="Week" selectedImage="Week" id="AjM-4D-qLA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tjY-72-4gh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -50,8 +49,8 @@
         <scene sceneID="k4G-q0-9Wv">
             <objects>
                 <navigationController id="hY3-1x-Z7z" userLabel="Workout Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Workout" selectedImage="Workout" id="Buo-et-nVO" userLabel="Workout"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9iu-JW-XxY">
+                    <tabBarItem key="tabBarItem" title="Workout" image="Workout" selectedImage="Workout" id="Buo-et-nVO" userLabel="Workout"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9iu-JW-XxY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -75,12 +74,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AR-mf-UQx">
-                                <rect key="frame" x="164.30669044689603" y="456" width="40.000000000000227" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AR-mf-UQx">
+                                <rect key="frame" x="158" y="394" width="58" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Timer"/>
+                                <state key="normal" title="Timer" image="Timer"/>
                                 <connections>
-                                    <segue destination="CN7-4o-Qqf" kind="show" id="gxn-lM-MRY"/>
+                                    <segue destination="ea8-Wz-6bu" kind="show" id="Rbw-WO-aOD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,65 +91,73 @@
             </objects>
             <point key="canvasLocation" x="2032.8" y="-1006.1469265367317"/>
         </scene>
-        <!--Timer View Controller-->
-        <scene sceneID="TGe-u4-I2H">
+        <!--Stop Watch View Controller-->
+        <scene sceneID="66u-Zi-8aX">
             <objects>
-                <viewController id="CN7-4o-Qqf" customClass="TimerViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ea8-Wz-6bu" customClass="StopWatchViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ocr-tP-8XN"/>
-                        <viewControllerLayoutGuide type="bottom" id="5De-kB-Nbo"/>
+                        <viewControllerLayoutGuide type="top" id="DaF-pL-Xcm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ile-TG-ZNU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ItS-N1-b2P">
+                    <view key="view" contentMode="scaleToFill" id="p3t-lj-baU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Timer Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0a-dK-Dip">
-                                <rect key="frame" x="54" y="165" width="267" height="83"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:34:56" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ4-6d-WLM">
+                                <rect key="frame" x="0.0" y="148" width="377" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYC-Yj-9Iq">
-                                <rect key="frame" x="0.0" y="366" width="150" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJB-b1-d5m">
+                                <rect key="frame" x="16" y="322" width="150" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Start"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="startAction:" destination="CN7-4o-Qqf" eventType="touchUpInside" id="839-p1-K2S"/>
+                                    <action selector="startPause:" destination="ea8-Wz-6bu" eventType="touchUpInside" id="gQX-ED-Jyl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6K7-jj-Tmv">
-                                <rect key="frame" x="225" y="366" width="150" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bm-Fx-5CW">
+                                <rect key="frame" x="209" y="322" width="150" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Pause"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="pauseResetAction:" destination="CN7-4o-Qqf" eventType="touchUpInside" id="Ra3-0V-KWd"/>
+                                    <action selector="reset:" destination="ea8-Wz-6bu" eventType="touchUpInside" id="72J-m7-a9y"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8V-w6-Mr2">
+                                <rect key="frame" x="-2" y="148" width="377" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="d0a-dK-Dip" secondAttribute="trailing" constant="38" id="i6M-2j-a3g"/>
-                            <constraint firstItem="d0a-dK-Dip" firstAttribute="centerX" secondItem="ItS-N1-b2P" secondAttribute="centerX" id="j4h-Xb-Jgg"/>
-                            <constraint firstItem="d0a-dK-Dip" firstAttribute="leading" secondItem="ItS-N1-b2P" secondAttribute="leadingMargin" constant="38" id="kBO-pd-vCN"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="PauseResetBtn" destination="6K7-jj-Tmv" id="91p-kk-LQS"/>
-                        <outlet property="timerLabel" destination="d0a-dK-Dip" id="cVS-A1-yHf"/>
+                        <outlet property="ResetButton" destination="9Bm-Fx-5CW" id="HQT-Yf-eW8"/>
+                        <outlet property="startPauseButton" destination="vJB-b1-d5m" id="aJd-Ar-Xff"/>
+                        <outlet property="stopwatchLabel" destination="lQ4-6d-WLM" id="HAo-gH-sfc"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XgW-zO-ufc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tau-Gd-8eD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2764" y="-1006.1469265367317"/>
+            <point key="canvasLocation" x="2911" y="-1006"/>
         </scene>
-        <!--Home-->
+        <!--Home Nav Controller-->
         <scene sceneID="Dem-Qe-JD7">
             <objects>
-                <navigationController id="91a-2i-ZD4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="Home" id="dyc-Eg-WUR"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aUo-CM-8X6">
+                <navigationController title="Home Nav Controller" id="91a-2i-ZD4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home" id="dyc-Eg-WUR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aUo-CM-8X6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -162,7 +169,7 @@
             </objects>
             <point key="canvasLocation" x="750" y="511"/>
         </scene>
-        <!--Home-->
+        <!--Today-->
         <scene sceneID="etM-bS-6ZV">
             <objects>
                 <viewController id="lJK-Zz-gQN" customClass="HomeViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -173,20 +180,45 @@
                     <view key="view" contentMode="scaleToFill" id="iVj-VU-JDZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FRIDAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdi-Zn-9BW">
+                                <rect key="frame" x="16" y="72" width="343" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrQ-pX-GIf">
+                                <rect key="frame" x="16" y="180" width="343" height="361"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="options for workout today will be displayed here BRO">
+                                        <attributes>
+                                            <font key="NSFont" size="40" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="tYT-iJ-wwQ"/>
+                    <navigationItem key="navigationItem" title="Today" id="tYT-iJ-wwQ"/>
+                    <connections>
+                        <outlet property="currentDayLabel" destination="fdi-Zn-9BW" id="LLf-4s-3Dj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qwx-4s-VFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2033" y="510"/>
+            <point key="canvasLocation" x="2032.8" y="509.59520239880067"/>
         </scene>
         <!--Profile-->
         <scene sceneID="XNa-Ax-Zji">
             <objects>
                 <navigationController id="Xmo-h5-weJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="Profile" id="iAo-Bl-6qX"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x2l-AM-7LZ">
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" selectedImage="Profile" id="iAo-Bl-6qX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x2l-AM-7LZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -198,7 +230,7 @@
             </objects>
             <point key="canvasLocation" x="750" y="1232"/>
         </scene>
-        <!--User Profile View Controller-->
+        <!--Profile Settings-->
         <scene sceneID="Kz4-em-Nfh">
             <objects>
                 <tableViewController id="qVE-ZG-tvK" customClass="UserProfileViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -211,11 +243,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="46P-CT-Bf7" id="YDq-qv-rNg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fEB-Jx-0CA">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -230,14 +262,18 @@
                             <outlet property="delegate" destination="qVE-ZG-tvK" id="GZ3-Bf-pru"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ety-Qm-9mq"/>
+                    <navigationItem key="navigationItem" title="Profile Settings" id="Ety-Qm-9mq">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Mbk-In-keU">
+                            <color key="tintColor" red="0.24031886550000001" green="0.71533946699999995" blue="0.55299815159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="j7I-dn-T9M" kind="show" identifier="SegueToFavorites" id="BLb-lm-UQ2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebj-HK-LAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1994" y="1236"/>
+            <point key="canvasLocation" x="1607" y="1237"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ReK-5z-g3x">
@@ -255,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKO-d4-boX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2795" y="1238"/>
+            <point key="canvasLocation" x="2390" y="1237"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="4db-JV-0SP">
@@ -272,7 +308,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDn-Lc-KS3">
                                 <rect key="frame" x="87" y="330" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.60999044325249419" green="0.72167353737821061" blue="0.9554251269035533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.98627614263421648" green="0.99215203610707026" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -299,7 +335,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="0.60999044329999996" green="0.72167353739999995" blue="0.95542512690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="5le-iV-Stk" eventType="touchUpInside" id="Ich-87-pvT"/>
@@ -376,7 +412,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76n-Ay-gtY">
                                 <rect key="frame" x="87" y="323" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.60999044329999996" green="0.72167353739999995" blue="0.95542512690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.47050476238944083" green="0.83217005075634509" blue="0.65018378514678887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Done!">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -412,9 +448,9 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
+                        <segue destination="91a-2i-ZD4" kind="relationship" relationship="viewControllers" id="x9S-wX-pDc"/>
                         <segue destination="hY3-1x-Z7z" kind="relationship" relationship="viewControllers" id="Y6Y-Bp-HLg"/>
                         <segue destination="Sl0-Fr-weR" kind="relationship" relationship="viewControllers" id="M1A-IO-cmo"/>
-                        <segue destination="91a-2i-ZD4" kind="relationship" relationship="viewControllers" id="x9S-wX-pDc"/>
                         <segue destination="Xmo-h5-weJ" kind="relationship" relationship="viewControllers" id="yMT-iX-5RD"/>
                     </connections>
                 </tabBarController>
@@ -426,10 +462,11 @@
     <resources>
         <image name="Home" width="25" height="25"/>
         <image name="Profile" width="32" height="32"/>
+        <image name="Timer" width="50" height="50"/>
         <image name="Week" width="25" height="25"/>
         <image name="Workout" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iVT-cu-jVF"/>
+        <segue reference="dAr-7c-lVT"/>
     </inferredMetricsTieBreakers>
 </document>
