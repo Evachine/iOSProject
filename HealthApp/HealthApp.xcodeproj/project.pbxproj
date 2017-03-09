@@ -141,9 +141,9 @@
 				6CB51B601E5394BB00EB40A3 /* Main.storyboard */,
 				6CB51B5E1E5394BB00EB40A3 /* SevenDaysViewController.swift */,
 				A44BA70F1E5D518B0005E47D /* SignUpViewController.swift */,
+				6C88AB601E714D9700174DD9 /* StopWatchViewController.swift */,
 				A47ABD7F1E5E4D9E00F30F91 /* UserProfileViewController.swift */,
 				6CB51B5C1E5394BB00EB40A3 /* WorkoutViewController.swift */,
-				6C88AB601E714D9700174DD9 /* StopWatchViewController.swift */,
 			);
 			path = HealthApp;
 			sourceTree = "<group>";

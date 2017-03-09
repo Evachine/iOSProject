@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5le-iV-Stk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5le-iV-Stk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,7 +26,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pa6-Z2-0cD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2033" y="-210"/>
+            <point key="canvasLocation" x="1681" y="-210"/>
         </scene>
         <!--Next 7 Days-->
         <scene sceneID="wSE-Er-Pdv">
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzR-d5-Kx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2032.8" y="-1006.1469265367317"/>
+            <point key="canvasLocation" x="1681" y="-1006"/>
         </scene>
         <!--Stop Watch View Controller-->
         <scene sceneID="66u-Zi-8aX">
@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tau-Gd-8eD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2911" y="-1006"/>
+            <point key="canvasLocation" x="2593" y="-1006"/>
         </scene>
         <!--Home Nav Controller-->
         <scene sceneID="Dem-Qe-JD7">
@@ -211,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qwx-4s-VFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2032.8" y="509.59520239880067"/>
+            <point key="canvasLocation" x="1681" y="510"/>
         </scene>
         <!--Profile-->
         <scene sceneID="XNa-Ax-Zji">
@@ -273,7 +273,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebj-HK-LAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1607" y="1237"/>
+            <point key="canvasLocation" x="1682" y="1232"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ReK-5z-g3x">
@@ -291,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKO-d4-boX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2390" y="1237"/>
+            <point key="canvasLocation" x="2594" y="1232"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="4db-JV-0SP">
@@ -467,6 +467,6 @@
         <image name="Workout" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dAr-7c-lVT"/>
+        <segue reference="iVT-cu-jVF"/>
     </inferredMetricsTieBreakers>
 </document>
