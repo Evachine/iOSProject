@@ -211,7 +211,7 @@
                                 <rect key="frame" x="16" y="180" width="343" height="361"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="options for workout today will be displayed here BRO">
+                                    <fragment content="EVAN display workout stuff for the day">
                                         <attributes>
                                             <font key="NSFont" size="40" name=".SFNSText"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
@@ -486,6 +486,6 @@
         <image name="Workout" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dAr-7c-lVT"/>
+        <segue reference="iVT-cu-jVF"/>
     </inferredMetricsTieBreakers>
 </document>
