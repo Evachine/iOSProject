@@ -10,6 +10,7 @@
 		2E3EA9EB145C1BAC5EDBD00D /* Pods_HealthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC7C67C9D75CA78D73CC839 /* Pods_HealthApp.framework */; };
 		55093691B5A89A607C21813D /* Pods_HealthAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC829C17FB8A4856817D7D8C /* Pods_HealthAppUITests.framework */; };
 		6C88AB611E714D9700174DD9 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88AB601E714D9700174DD9 /* StopWatchViewController.swift */; };
+		6C88AB631E71D52F00174DD9 /* WeeksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88AB621E71D52F00174DD9 /* WeeksTableViewController.swift */; };
 		6C94B6091E53A12E00697D59 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C94B6081E53A12E00697D59 /* LoginViewController.swift */; };
 		6CB51B5B1E5394BB00EB40A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B5A1E5394BB00EB40A3 /* AppDelegate.swift */; };
 		6CB51B5D1E5394BB00EB40A3 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B5C1E5394BB00EB40A3 /* WorkoutViewController.swift */; };
@@ -48,6 +49,7 @@
 		3FC7C67C9D75CA78D73CC839 /* Pods_HealthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CE3A44686AB40B94CDF3A8 /* Pods-HealthAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthAppTests/Pods-HealthAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C88AB601E714D9700174DD9 /* StopWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
+		6C88AB621E71D52F00174DD9 /* WeeksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeksTableViewController.swift; sourceTree = "<group>"; };
 		6C94B6081E53A12E00697D59 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6CB51B571E5394BB00EB40A3 /* HealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB51B5A1E5394BB00EB40A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				A47ABD7D1E5E4D3600F30F91 /* FavoritesViewController.swift */,
 				6CB51B8A1E53965D00EB40A3 /* GoogleService-Info.plist */,
 				A47ABD7B1E5E472A00F30F91 /* HomeViewController.swift */,
+				6C88AB621E71D52F00174DD9 /* WeeksTableViewController.swift */,
 				6CB51B681E5394BB00EB40A3 /* Info.plist */,
 				6CB51B651E5394BB00EB40A3 /* LaunchScreen.storyboard */,
 				6C94B6081E53A12E00697D59 /* LoginViewController.swift */,
@@ -477,6 +480,7 @@
 				6C94B6091E53A12E00697D59 /* LoginViewController.swift in Sources */,
 				6CB51B5F1E5394BB00EB40A3 /* SevenDaysViewController.swift in Sources */,
 				A47ABD7C1E5E472A00F30F91 /* HomeViewController.swift in Sources */,
+				6C88AB631E71D52F00174DD9 /* WeeksTableViewController.swift in Sources */,
 				6C88AB611E714D9700174DD9 /* StopWatchViewController.swift in Sources */,
 				6CB51B5B1E5394BB00EB40A3 /* AppDelegate.swift in Sources */,
 				A47ABD801E5E4D9E00F30F91 /* UserProfileViewController.swift in Sources */,
