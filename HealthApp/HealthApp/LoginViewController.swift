@@ -89,21 +89,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //To create a new user with the passed in info:
     
     /*FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
-    // ...
-    }
-    
-    
-    // To sign in:
-    FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
-    // ...
-    }
-    
-    // To sign out:
-    
-    let firebaseAuth = FIRAuth.auth()
-    do {
-    try firebaseAuth?.signOut()
-    } catch let signOutError as NSError {
-    print ("Error signing out: %@", signOutError)
-    }*/
+     // ...
+     }
+     
+     
+     // To sign in:
+     FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
+     // ...
+     }
+     
+     // To sign out:
+     
+     let firebaseAuth = FIRAuth.auth()
+     do {
+     try firebaseAuth?.signOut()
+     } catch let signOutError as NSError {
+     print ("Error signing out: %@", signOutError)
+     }*/
 }

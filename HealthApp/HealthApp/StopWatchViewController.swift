@@ -17,21 +17,21 @@ class StopWatchViewController: UIViewController {
     var startPauseWatch: Bool = true
     var stopwatchString = ""
     
-    private var displayLink: CADisplayLink?
-    private var startTime: CFAbsoluteTime = 0
-    private var endTime: CFAbsoluteTime = 0 {
-        didSet {
-            updateStopwatch()
-        }
-    }
-    private var elapsedTime: TimeInterval {
-        if startPauseWatch == true {
-            return endTime - startTime
-        }
-        else {
-            return CFAbsoluteTimeGetCurrent() - startTime
-        }
-    }
+    /*private var displayLink: CADisplayLink?
+     private var startTime: CFAbsoluteTime = 0
+     private var endTime: CFAbsoluteTime = 0 {
+     didSet {
+     updateStopwatch()
+     }
+     }
+     private var elapsedTime: TimeInterval {
+     if startPauseWatch == true {
+     return endTime - startTime
+     }
+     else {
+     return CFAbsoluteTimeGetCurrent() - startTime
+     }
+     }*/
     
     @IBOutlet weak var stopwatchLabel: UILabel!
     @IBOutlet weak var startPauseButton: UIButton!
@@ -45,7 +45,6 @@ class StopWatchViewController: UIViewController {
                 , target: self, selector: Selector("updateStopwatch"), userInfo: nil, repeats: true)
             
             startPauseWatch = false
-            startTime = CFAbsoluteTimeGetCurrent()
             
             DispatchQueue.main.async {
                 self.startPauseButton.setTitle("Pause", for: .normal)
@@ -63,18 +62,16 @@ class StopWatchViewController: UIViewController {
     }
     
     @IBAction func reset(_ sender: Any) {
-        //millSecs = 0
-        //seconds = 0
-        //minutes = 0
-        //stopwatchString = "00:00:00"
-        //stopwatchLabel.text = stopwatchString
-        startTime = 0
-        endTime = 0
+        millSecs = 0
+        seconds = 0
+        minutes = 0
+        stopwatchString = "00:00:00"
+        stopwatchLabel.text = stopwatchString
     }
     
     func updateStopwatch() {
         
-        /*millSecs += 1
+        millSecs += 1
         
         if millSecs == 100 {
             seconds += 1
@@ -91,21 +88,8 @@ class StopWatchViewController: UIViewController {
         let minutesString = minutes > 9 ? "\(minutes)" : "0\(minutes)"
         
         stopwatchString = "\(minutesString):\(secondsString):\(millSecsString)"
-        stopwatchLabel.text = stopwatchString*/
-        stopwatchLabel.text = String(format: "%.02f", elapsedTime)
+        stopwatchLabel.text = stopwatchString
         
-    }
-    
-    private func createDisplayLinkIfNeeded() {
-        guard self.displayLink == nil else { return }
-        let displayLink = CADisplayLink(target: self, selector: "displayLinkDidFire:")
-        displayLink.isPaused = true
-        displayLink.add(to: RunLoop.main, forMode: RunLoopMode.commonModes)
-        self.displayLink = displayLink
-    }
-    
-    func displayLinkDidFire(_: CADisplayLink) {
-        updateStopwatch()
     }
     
     override func viewDidLoad() {
