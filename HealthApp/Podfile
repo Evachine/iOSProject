@@ -7,6 +7,7 @@ target 'HealthApp' do
 
   # Pods for HealthApp
   pod 'Firebase'
+  pod 'Firebase/Auth'
 
   target 'HealthAppTests' do
    pod 'Firebase'
