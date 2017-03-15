@@ -17,21 +17,12 @@ class StopWatchViewController: UIViewController {
     var startPauseWatch: Bool = true
     var stopwatchString = ""
     
-    /*private var displayLink: CADisplayLink?
-     private var startTime: CFAbsoluteTime = 0
-     private var endTime: CFAbsoluteTime = 0 {
-     didSet {
-     updateStopwatch()
-     }
-     }
-     private var elapsedTime: TimeInterval {
-     if startPauseWatch == true {
-     return endTime - startTime
-     }
-     else {
-     return CFAbsoluteTimeGetCurrent() - startTime
-     }
-     }*/
+    // Links to potentially fix our timer issues:
+    //
+    // http://stackoverflow.com/questions/35496203/nstimer-too-slow
+    // https://developer.apple.com/reference/foundation/timer
+    // https://developer.apple.com/reference/corefoundation/1543542-cfabsolutetimegetcurrent
+    // https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFDatesAndTimes/CFDatesAndTimes.html#//apple_ref/doc/uid/10000125i
     
     @IBOutlet weak var stopwatchLabel: UILabel!
     @IBOutlet weak var startPauseButton: UIButton!
