@@ -7,7 +7,11 @@ target 'HealthApp' do
 
   # Pods for HealthApp
   pod 'Firebase'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'FirebaseUI', '~> 1.0'
+  pod 'GoogleSignIn'
 
   target 'HealthAppTests' do
    pod 'Firebase'

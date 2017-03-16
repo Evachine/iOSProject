@@ -8,7 +8,8 @@
 
 import UIKit
 import Firebase
-//import FirebaseAuthUI
+import FirebaseAuthUI
+import FirebaseAuth
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
@@ -92,11 +93,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func doneSigningUpPressed(_ sender: UIButton) {
         // TODO: Add functionality!
-    //  FIRAuth.auth()?.createUser(withEmail: emailText.text, password: passwordText.text) { (user, error) in
+      FIRAuth.auth()?.createUser(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
          
       //   print("creating user")
        //  print(user)
-     // }
+      }
       passwordsMatch(pw1: (passwordText?.text)!, pw2: (password2Text?.text)!)
       
         performSegue(withIdentifier: "doneSigningUpPressed", sender: sender)

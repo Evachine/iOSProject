@@ -24,12 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GTMSessionFetcher-Core.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>GTMSessionFetcher.default-Core.xcscheme</key>
+		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -67,27 +62,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>360DBA44E3D5A400455C6DD9CB5A6782</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>44CAD6CE523055ED339E87154473A254</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E1B0D5AF34EEC1B461703F57D09382C</key>
+		<key>681BE6E3D02A43F9BA63777AC435C8FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5365F5212E9D376532556DDF958C89DE</key>
+		<key>862EDEE68863CA4E5C0CE1B8C1AA73AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B0A0125BF6C764EA1FA9DC798E81ECD</key>
+		<key>900E072B03418057033B4D96A958C83F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B97DCE8B5DA2B961756B4A150FE1C2A</key>
+		<key>B1C4AAFAF49036C7007633DAA3C806AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,17 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF1AC1805E6D5AD3847F09F22460333B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>DCC0E3D041132E2135AA73025629ABE5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E507D935FF66A66E1086B64CA3096F35</key>
 		<dict>
 			<key>primary</key>
 			<true/>
