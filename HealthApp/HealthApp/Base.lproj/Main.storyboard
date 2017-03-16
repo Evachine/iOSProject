@@ -52,7 +52,7 @@
             <objects>
                 <navigationController id="Sl0-Fr-weR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Next 7 Days" image="Week" selectedImage="Week" id="AjM-4D-qLA"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tjY-72-4gh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tjY-72-4gh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,7 +70,7 @@
             <objects>
                 <navigationController id="hY3-1x-Z7z" userLabel="Workout Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Workout" image="Workout" selectedImage="Workout" id="Buo-et-nVO" userLabel="Workout"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9iu-JW-XxY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9iu-JW-XxY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -186,7 +186,7 @@
             <objects>
                 <navigationController title="Home Nav Controller" id="91a-2i-ZD4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home" id="dyc-Eg-WUR"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aUo-CM-8X6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aUo-CM-8X6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -242,7 +242,7 @@
             <objects>
                 <navigationController id="Xmo-h5-weJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" selectedImage="Profile" id="iAo-Bl-6qX"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x2l-AM-7LZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x2l-AM-7LZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -525,10 +525,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="359" height="456"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a custom subview, workout of the day can be set to be displayed in here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8O-9x-AB6">
-                                <rect key="frame" x="0.0" y="0.0" width="327" height="387"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title of today's workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfA-x3-gfX">
+                                <rect key="frame" x="16" y="25" width="327" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="backgroundColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlH-cR-w6j">
+                                <rect key="frame" x="16" y="81" width="327" height="294"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Description of today's workout goes here................................................................................................................................</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -538,7 +548,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OoW-XO-Gej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2901.5999999999999" y="-269.41529235382313"/>
+            <point key="canvasLocation" x="2901.5999999999999" y="-269.86506746626691"/>
         </scene>
     </scenes>
     <resources>
