@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuthUI
+import FirebaseAuth
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
@@ -26,8 +29,31 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         emailText.delegate = self
         passwordText.delegate = self
         password2Text.delegate = self
+      
+      passwordText.isSecureTextEntry = true
+      password2Text.isSecureTextEntry = true
         
     }
+   
+   func passwordsMatch(pw1: String, pw2: String) -> Bool {
+      if pw1 != pw2 {
+         let alertController = UIAlertController(title: "Oops!", message: "Passwords don't match.", preferredStyle: UIAlertControllerStyle.alert)
+         
+         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+         {
+            (result : UIAlertAction) -> Void in
+            print("You pressed OK")
+         }
+         alertController.addAction(okAction)
+         self.present(alertController, animated: true, completion: nil)
+         
+         return false
+      }
+      else {
+         return true
+      }
+   }
+   
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         return true
@@ -67,7 +93,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func doneSigningUpPressed(_ sender: UIButton) {
         // TODO: Add functionality!
-        
+      FIRAuth.auth()?.createUser(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
+         
+      //   print("creating user")
+       //  print(user)
+      }
+      passwordsMatch(pw1: (passwordText?.text)!, pw2: (password2Text?.text)!)
+      
         performSegue(withIdentifier: "doneSigningUpPressed", sender: sender)
     }
 }
