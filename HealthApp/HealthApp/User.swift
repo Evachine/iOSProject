@@ -12,11 +12,11 @@ class User {
    
    var firstName: String?
    var lastName: String?
-   var workoutPlan: WorkoutPlan?
+   var workoutPlan: String?
    var email: String?
    var password: String?
    
-   init(firstName: String, lastName: String, workoutPlan: WorkoutPlan, email: String, password: String) {
+   init(firstName: String, lastName: String, workoutPlan: String, email: String, password: String) {
       self.firstName = firstName
       self.lastName = lastName
       self.workoutPlan = workoutPlan
@@ -24,8 +24,19 @@ class User {
       self.password = password
    }
    
-   convenience init(firstName: String, workoutPlan: WorkoutPlan, email: String, password: String) {
+   convenience init(firstName: String, workoutPlan: String, email: String, password: String) {
        self.init(firstName: firstName, lastName: "", workoutPlan: workoutPlan, email: email, password: password)
    }
+   
+   func toAnyObject() -> Any {
+      return [
+         "firstName": firstName,
+         "lastName": lastName,
+         "workoutPlan": workoutPlan,
+         "email" : email,
+         "password" : password
+      ]
+   }
+
    
 }

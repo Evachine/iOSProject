@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuthUI
 import FirebaseAuth
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
@@ -19,6 +20,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var password2Text: UITextField!
     @IBOutlet weak var doneButton: UIButton!
+   
+   var firstName: String = ""
+   var lastName: String = ""
+   var workoutPlan: WorkoutPlan?
+   var email: String = ""
+   var password: String = ""
+   
+   var ref : FIRDatabaseReference?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +69,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if (textField == firstNameText) {
+       /* if (textField == firstNameText) {
             firstNameText.text = textField.text
         }
         
@@ -78,7 +87,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         if (textField == password2Text) {
             password2Text.text = textField.text
-        }
+        }*/
         
         textField.resignFirstResponder()
         
@@ -93,12 +102,43 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func doneSigningUpPressed(_ sender: UIButton) {
         // TODO: Add functionality!
+      
+      if (firstNameText.text != nil) {
+         firstName = firstNameText.text!
+      }
+      
+      if (lastNameText.text != nil) {
+         lastName = lastNameText.text!
+      }
+      
+      // TODO: Set up workout plan
+      
+      if (emailText.text != nil) {
+         email = emailText.text!
+      }
+      
+      if (passwordText.text != nil) {
+         password = passwordText.text!
+      }
+      
       FIRAuth.auth()?.createUser(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
          
-      //   print("creating user")
-       //  print(user)
+         print("creating user")
+
       }
-      passwordsMatch(pw1: (passwordText?.text)!, pw2: (password2Text?.text)!)
+      if passwordsMatch(pw1: (passwordText?.text)!, pw2: (password2Text?.text)!) {
+        
+         // TODO: this isnt working
+        /* let newUser = User(firstName: firstName, lastName: lastName, workoutPlan: "", email: email, password: password)
+         
+         ref = FIRDatabase.database().reference(withPath: "users")
+         
+         let person = ref?.child((newUser.email!))
+         
+         // 4
+         person?.setValue(newUser.toAnyObject())*/
+         
+      }
       
         performSegue(withIdentifier: "doneSigningUpPressed", sender: sender)
     }

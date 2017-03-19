@@ -22,7 +22,7 @@
 		6CB51B671E5394BB00EB40A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB51B651E5394BB00EB40A3 /* LaunchScreen.storyboard */; };
 		6CB51B721E5394BB00EB40A3 /* HealthAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B711E5394BB00EB40A3 /* HealthAppTests.swift */; };
 		6CB51B7D1E5394BB00EB40A3 /* HealthAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B7C1E5394BB00EB40A3 /* HealthAppUITests.swift */; };
-		6CB51B8B1E53965D00EB40A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CB51B8A1E53965D00EB40A3 /* GoogleService-Info.plist */; };
+		6CEB65BF1E7E0BA9005F3E4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CEB65BE1E7E0BA9005F3E4A /* GoogleService-Info.plist */; };
 		A44BA7101E5D518B0005E47D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BA70F1E5D518B0005E47D /* SignUpViewController.swift */; };
 		A47ABD7C1E5E472A00F30F91 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ABD7B1E5E472A00F30F91 /* HomeViewController.swift */; };
 		A47ABD7E1E5E4D3600F30F91 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ABD7D1E5E4D3600F30F91 /* FavoritesViewController.swift */; };
@@ -69,7 +69,7 @@
 		6CB51B781E5394BB00EB40A3 /* HealthAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB51B7C1E5394BB00EB40A3 /* HealthAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthAppUITests.swift; sourceTree = "<group>"; };
 		6CB51B7E1E5394BB00EB40A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6CB51B8A1E53965D00EB40A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6CEB65BE1E7E0BA9005F3E4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6DEC8306A7D37C8D03A9EB30 /* Pods-HealthApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthApp/Pods-HealthApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6E4B6373D228ED06C52DF9A9 /* Pods-HealthAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthAppUITests/Pods-HealthAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B14D648A53343BC9AB5C5F2 /* Pods-HealthAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthAppTests/Pods-HealthAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +114,7 @@
 		6CB51B4E1E5394BB00EB40A3 = {
 			isa = PBXGroup;
 			children = (
+				6CEB65BE1E7E0BA9005F3E4A /* GoogleService-Info.plist */,
 				6CB51B591E5394BB00EB40A3 /* HealthApp */,
 				6CB51B701E5394BB00EB40A3 /* HealthAppTests */,
 				6CB51B7B1E5394BB00EB40A3 /* HealthAppUITests */,
@@ -139,7 +140,6 @@
 				6CB51B5A1E5394BB00EB40A3 /* AppDelegate.swift */,
 				6CB51B631E5394BB00EB40A3 /* Assets.xcassets */,
 				A47ABD7D1E5E4D3600F30F91 /* FavoritesViewController.swift */,
-				6CB51B8A1E53965D00EB40A3 /* GoogleService-Info.plist */,
 				A47ABD7B1E5E472A00F30F91 /* HomeViewController.swift */,
 				6C88AB621E71D52F00174DD9 /* WeeksTableViewController.swift */,
 				6CB51B681E5394BB00EB40A3 /* Info.plist */,
@@ -318,7 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CB51B671E5394BB00EB40A3 /* LaunchScreen.storyboard in Resources */,
-				6CB51B8B1E53965D00EB40A3 /* GoogleService-Info.plist in Resources */,
+				6CEB65BF1E7E0BA9005F3E4A /* GoogleService-Info.plist in Resources */,
 				6CB51B641E5394BB00EB40A3 /* Assets.xcassets in Resources */,
 				6CB51B621E5394BB00EB40A3 /* Main.storyboard in Resources */,
 			);

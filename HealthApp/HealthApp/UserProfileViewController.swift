@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class UserProfileViewController: UITableViewController {
    var workoutInfo = ["Favorites", "Current plan"]
    
    var profileInfo = ["Name: ", "Email: ", "Password: "]
-   
+   var logoutOk = true
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -70,7 +72,19 @@ class UserProfileViewController: UITableViewController {
    
    @IBAction func logoutUser(_ sender: UIBarButtonItem) {
       
-      performSegue(withIdentifier: "unwindLogin", sender: sender)
+      let firebaseAuth = FIRAuth.auth()
+      do {
+         try firebaseAuth?.signOut()
+         
+      } catch let signOutError as NSError {
+         logoutOk = false
+         print ("Error signing out: %@", signOutError)
+      }
+      
+      if logoutOk {
+         performSegue(withIdentifier: "unwindLogin", sender: sender)
+      }
+      
    }
    
 }
