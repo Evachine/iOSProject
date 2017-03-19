@@ -142,4 +142,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
       
         performSegue(withIdentifier: "doneSigningUpPressed", sender: sender)
     }
+   
+   @IBAction func backButtonIsPressed(_ sender: Any) {
+      
+      performSegue(withIdentifier: "unwindToLogin", sender: sender)
+   }
+   
 }
