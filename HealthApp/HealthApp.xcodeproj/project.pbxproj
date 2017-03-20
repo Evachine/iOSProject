@@ -24,6 +24,7 @@
 		6CB51B7D1E5394BB00EB40A3 /* HealthAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B7C1E5394BB00EB40A3 /* HealthAppUITests.swift */; };
 		6CEB65BF1E7E0BA9005F3E4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CEB65BE1E7E0BA9005F3E4A /* GoogleService-Info.plist */; };
 		A44BA7101E5D518B0005E47D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BA70F1E5D518B0005E47D /* SignUpViewController.swift */; };
+		A45F91E91E802B1900557B08 /* WorkoutDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45F91E81E802B1900557B08 /* WorkoutDisplayViewController.swift */; };
 		A47ABD7C1E5E472A00F30F91 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ABD7B1E5E472A00F30F91 /* HomeViewController.swift */; };
 		A47ABD7E1E5E4D3600F30F91 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ABD7D1E5E4D3600F30F91 /* FavoritesViewController.swift */; };
 		A47ABD801E5E4D9E00F30F91 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ABD7F1E5E4D9E00F30F91 /* UserProfileViewController.swift */; };
@@ -77,6 +78,7 @@
 		9429B8950135BFDA5327FBF4 /* Pods-HealthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthApp/Pods-HealthApp.release.xcconfig"; sourceTree = "<group>"; };
 		9A05C9E24BD967DBB5C3B635 /* Pods_HealthAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44BA70F1E5D518B0005E47D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A45F91E81E802B1900557B08 /* WorkoutDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDisplayViewController.swift; sourceTree = "<group>"; };
 		A47ABD7B1E5E472A00F30F91 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A47ABD7D1E5E4D3600F30F91 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		A47ABD7F1E5E4D9E00F30F91 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				6CB51B5C1E5394BB00EB40A3 /* WorkoutViewController.swift */,
 				6C2FEE881E79CE7000BA5EA3 /* User.swift */,
 				6C2FEE8A1E79CEAF00BA5EA3 /* WorkoutPlan.swift */,
+				A45F91E81E802B1900557B08 /* WorkoutDisplayViewController.swift */,
 			);
 			path = HealthApp;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				6CB51B5D1E5394BB00EB40A3 /* WorkoutViewController.swift in Sources */,
 				A44BA7101E5D518B0005E47D /* SignUpViewController.swift in Sources */,
 				6C2FEE891E79CE7000BA5EA3 /* User.swift in Sources */,
+				A45F91E91E802B1900557B08 /* WorkoutDisplayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

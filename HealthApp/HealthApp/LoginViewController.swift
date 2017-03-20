@@ -14,9 +14,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
-   
-   var email: String? = ""
-   var password: String? = ""
+    
+    var email: String? = ""
+    var password: String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,18 +39,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-      /*  if (textField == emailText) {
-            //print("Email: \(textField.text)")
-            
-            email = textField.text!
-        }
-        
-        if (textField == passwordText) {
-          //  print("PW: \(textField.text)")
-            
-            password = textField.text!
-        }
-        */
+        /*  if (textField == emailText) {
+         //print("Email: \(textField.text)")
+         
+         email = textField.text!
+         }
+         
+         if (textField == passwordText) {
+         //  print("PW: \(textField.text)")
+         
+         password = textField.text!
+         }
+         */
         textField.resignFirstResponder()
         
         return true
@@ -58,59 +58,57 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-      
-         if (emailText.text != nil) {
+        
+        if (emailText.text != nil) {
             email = emailText.text
-         }
-      
-         if passwordText.text != nil {
+        }
+        
+        if passwordText.text != nil {
             password = passwordText.text
-         }
-      
-      print("Email: \(email!)")
-      print("Password: \(password!)")
-      
-      FIRAuth.auth()?.signIn(withEmail: email!, password: password!) { (user, error) in
-       
-         if let user = user {
-            let uid = user.uid  // Unique ID, which you can use to identify the user on the client side
-            let email = user.email
-            let photoURL = user.photoURL
-            user.getTokenWithCompletion({ (token, error) in
-              // let idToken? = token  // ID token, which you can safely send to a backend
-            })
+        }
+        
+        print("Email: \(email!)")
+        print("Password: \(password!)")
+        
+        FIRAuth.auth()?.signIn(withEmail: email!, password: password!) { (user, error) in
             
-            self.performSegue(withIdentifier: "loginIsPressed", sender: sender)
-
-         }
-         else {
-            let alertController = UIAlertController(title: "Oops!", message: "Invalid email/password combination", preferredStyle: UIAlertControllerStyle.alert)
-            
-            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
-            {
-               (result : UIAlertAction) -> Void in
-               print("You pressed OK")
+            if let user = user {
+                let uid = user.uid  // Unique ID, which you can use to identify the user on the client side
+                let email = user.email
+                let photoURL = user.photoURL
+                user.getTokenWithCompletion({ (token, error) in
+                    // let idToken? = token  // ID token, which you can safely send to a backend
+                })
+                
+                self.performSegue(withIdentifier: "loginIsPressed", sender: sender)
+                
             }
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
-         }
-      }
-      
-      // TODO: Add functionality!
-      
+            else {
+                let alertController = UIAlertController(title: "Oops!", message: "Invalid email/password combination", preferredStyle: UIAlertControllerStyle.alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+                {
+                    (result : UIAlertAction) -> Void in
+                    print("You pressed OK")
+                }
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+        
+        // TODO: Add functionality!
+        
         
     }
     
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
-        // TODO: Add functionality!
-        
         performSegue(withIdentifier: "signupIsPressed", sender: sender)
     }
-   
-   @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
-      
-   }
+    
+    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
+        
+    }
     
     
     /*

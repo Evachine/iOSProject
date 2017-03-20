@@ -12,6 +12,7 @@ target 'HealthApp' do
   pod 'Firebase/Auth'
   pod 'FirebaseUI', '~> 1.0'
   pod 'GoogleSignIn'
+  pod 'Kanna', '~> 2.1.0'
 
   target 'HealthAppTests' do
    pod 'Firebase'
@@ -19,7 +20,8 @@ target 'HealthApp' do
    pod 'Firebase/Database'
    pod 'Firebase/Auth'
    pod 'FirebaseUI', '~> 1.0'
-   pod 'GoogleSignIn'    
+   pod 'GoogleSignIn'
+   pod 'Kanna', '~> 2.1.0'
 
    inherit! :search_paths
    # Pods for testing

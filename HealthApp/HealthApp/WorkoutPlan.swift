@@ -9,5 +9,5 @@
 import Foundation
 
 class WorkoutPlan {
-   // Modify this class
+    // Modify this class
 }
