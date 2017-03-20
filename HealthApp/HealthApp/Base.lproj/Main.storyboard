@@ -52,7 +52,7 @@
             <objects>
                 <navigationController id="Sl0-Fr-weR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Next 7 Days" image="Week" selectedImage="Week" id="AjM-4D-qLA"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tjY-72-4gh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tjY-72-4gh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,7 +70,7 @@
             <objects>
                 <navigationController id="hY3-1x-Z7z" userLabel="Workout Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Workout" image="Workout" selectedImage="Workout" id="Buo-et-nVO" userLabel="Workout"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9iu-JW-XxY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9iu-JW-XxY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -186,7 +186,7 @@
             <objects>
                 <navigationController title="Home Nav Controller" id="91a-2i-ZD4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home" id="dyc-Eg-WUR"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aUo-CM-8X6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aUo-CM-8X6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -242,7 +242,7 @@
             <objects>
                 <navigationController id="Xmo-h5-weJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" selectedImage="Profile" id="iAo-Bl-6qX"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x2l-AM-7LZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x2l-AM-7LZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -528,10 +528,10 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Workout Display View Controller-->
         <scene sceneID="aW6-cC-FFR">
             <objects>
-                <viewController id="q0l-oO-NLa" sceneMemberID="viewController">
+                <viewController id="q0l-oO-NLa" customClass="WorkoutDisplayViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AwA-ac-4z1"/>
                         <viewControllerLayoutGuide type="bottom" id="u1E-aC-VZP"/>
