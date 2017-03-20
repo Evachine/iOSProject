@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Kanna
-
 
 class WorkoutViewController: UIViewController {
     

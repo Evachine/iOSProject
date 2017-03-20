@@ -10,4 +10,6 @@ import Foundation
 
 class WorkoutPlan {
     // Modify this class
+    
+    // Nice^
 }

@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseDatabase
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -18,6 +19,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var email: String? = ""
     var password: String? = ""
     
+    var ref : FIRDatabaseReference!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +29,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordText.delegate = self
         
         passwordText.isSecureTextEntry = true
+        
+        self.ref = FIRDatabase.database().reference()
+
         
         // Do any additional setup after loading the view.
     }
@@ -79,6 +86,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 user.getTokenWithCompletion({ (token, error) in
                     // let idToken? = token  // ID token, which you can safely send to a backend
                 })
+                
+                let userID = FIRAuth.auth()?.currentUser?.uid
+                self.ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+                    // Get user value
+                    let value = snapshot.value as? NSDictionary
+                    let workoutsCompleted = value?["workoutsCompleted"] as? Int ?? -1
+                    
+                    print("workoutsCompleted: " + String(workoutsCompleted))
+                    
+                    // ...
+                }) { (error) in
+                    print(error.localizedDescription)
+                }
+                
                 
                 self.performSegue(withIdentifier: "loginIsPressed", sender: sender)
                 

@@ -34,11 +34,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Kanna.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-HealthApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,17 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>360DBA44E3D5A400455C6DD9CB5A6782</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>44CAD6CE523055ED339E87154473A254</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4D10E4FF5A483B852B47CCA0B994E340</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4FEF44B310F9AA62757BB047D86E5ABB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,12 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA047F2BD600AA0836E92B91FA4E98F6</key>
+		<key>862EDEE68863CA4E5C0CE1B8C1AA73AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B04D9948B409DA0C654708749E6C789E</key>
+		<key>900E072B03418057033B4D96A958C83F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

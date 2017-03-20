@@ -29,7 +29,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     var email: String = ""
     var password: String = ""
     
-    var ref : FIRDatabaseReference?
+    var ref : FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -143,22 +143,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                                         alertController.addAction(okAction)
                                         self.present(alertController, animated: true, completion: nil)
                                     }
-                                }
-                                
-                                /* TODO: Try to check if user already exists
-                                 
-                                 ref!.child("Users").queryOrdered(byChild: "name").queryEqual(toValue: email).observeSingleEvent(of: .value, with: { (snapshot) in
-                                    if snapshot.exists() == true {
-                                        print("snapshot exists")
-                                    }
                                     else {
-                                        print("snapshot doesnt exist")
+                                        self.ref.child("users").child(user!.uid).setValue(["email": self.email,"firstName": self.firstName,"lastName": self.lastName, "workoutPlan": "", "workoutsCompleted": 0, "ftp": 250])
                                     }
-                                }) { (error) in
-                                    print(error.localizedDescription)
                                 }
                                 
-                                performSegue(withIdentifier: "doneSigningUpPressed", sender: sender)*/
+                                // TODO: Try to check if user already exists
+                                
+                                performSegue(withIdentifier: "doneSigningUpPressed", sender: sender)
                                 
                             }
                             else {

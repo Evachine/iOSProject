@@ -8,61 +8,50 @@
 
 import Foundation
 import UIKit
-import Kanna
 
 
 class WorkoutDisplayViewController: UIViewController {
     
+    @IBOutlet weak var workoutContents: UITextView!
+    @IBOutlet weak var workoutTitle: UILabel!
+    
+    var workoutId : Int? = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let url = URL(string: "http://www.73summits.com/ergdb/api/workout/3198/292/json") {
+        // TODO: Instead of 3198, should get workout_id and add to user's worksoutsCompleted
+        if let url = URL(string: "http://www.73summits.com/ergdb/api/workout/3198/80/json") {
             let session = URLSession.shared
             let download = session.dataTask(with: url) {
                 (data: Data?, response: URLResponse?, error: Error?) -> Void in
                 
                 if let data = data {
-                    print("DATA:")
-                    print(data)
-                    print("----")
                     let json = JSON(data:data)
-                    print("JSON:")
-                    print(json)
-                    print("----")
                     
-//                    DispatchQueue.main.async {
-//                        [weak self] in
-//                        guard let this = self else { return }
-//                        this.posLabel.text = json["features"][0]["properties"]["place"].stringValue
-//                        this.tableButton.isEnabled = true
-//                        this.features = json["features"]
-//                    }
+                    DispatchQueue.main.async {
+                        [weak self] in
+                        guard let this = self else { return }
+                        this.workoutTitle!.text = "Workout of the Day"
+                        let arr = json.array!
+                        
+                        for index in 0...arr.count - 1 {
+                            if (1 != index && index % 2 == 0) {
+                                let point1 = arr[index]
+                                let point2 = arr[index + 1]
+                                
+                                let interval = Int(point2[0].rawString()!)! - Int(point1[0].rawString()!)!
+                                let percent = Int(point1[1].rawString()!)!
+                                
+                                this.workoutContents!.text = this.workoutContents!.text + String(interval) + "\tminutes at " + String(percent) + String("%\tof your FTP\n")
+                            }
+                        }
+                    }
                 }
             }
             
             download.resume()
         }
-        
-        
-//        let myURLString = "http://rpmtraining.com/blog/"
-//        var html = ""
-//        guard let myURL = URL(string: myURLString) else {
-//            print("Error: \(myURLString) doesn't seem to be a valid URL")
-//            return
-//        }
-//        
-//        do {
-//            html = try String(contentsOf: myURL, encoding: .ascii)
-//            print("HTML : \(html)")
-//            
-//            // Titles are in an <h2 class="entry-title"...
-//            //
-//            // Content is in a <p><strong>CROSSFIT...
-//            // CSPORT content is same but it's <p class="p1"><strong>CSPORT......
-//        }
-//        catch let error {
-//            print("Error: \(error)")
-//        }
     }
     
     override func didReceiveMemoryWarning() {

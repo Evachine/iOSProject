@@ -145,7 +145,6 @@
 				6CB51B631E5394BB00EB40A3 /* Assets.xcassets */,
 				A47ABD7D1E5E4D3600F30F91 /* FavoritesViewController.swift */,
 				A47ABD7B1E5E472A00F30F91 /* HomeViewController.swift */,
-				6C88AB621E71D52F00174DD9 /* WeeksTableViewController.swift */,
 				6CB51B681E5394BB00EB40A3 /* Info.plist */,
 				6CB51B651E5394BB00EB40A3 /* LaunchScreen.storyboard */,
 				6C94B6081E53A12E00697D59 /* LoginViewController.swift */,
@@ -153,12 +152,13 @@
 				6CB51B5E1E5394BB00EB40A3 /* SevenDaysViewController.swift */,
 				A44BA70F1E5D518B0005E47D /* SignUpViewController.swift */,
 				6C88AB601E714D9700174DD9 /* StopWatchViewController.swift */,
-				A47ABD7F1E5E4D9E00F30F91 /* UserProfileViewController.swift */,
-				6CB51B5C1E5394BB00EB40A3 /* WorkoutViewController.swift */,
 				A45F91EA1E80404700557B08 /* SwiftyJSON.swift */,
 				6C2FEE881E79CE7000BA5EA3 /* User.swift */,
-				6C2FEE8A1E79CEAF00BA5EA3 /* WorkoutPlan.swift */,
+				A47ABD7F1E5E4D9E00F30F91 /* UserProfileViewController.swift */,
+				6C88AB621E71D52F00174DD9 /* WeeksTableViewController.swift */,
 				A45F91E81E802B1900557B08 /* WorkoutDisplayViewController.swift */,
+				6C2FEE8A1E79CEAF00BA5EA3 /* WorkoutPlan.swift */,
+				6CB51B5C1E5394BB00EB40A3 /* WorkoutViewController.swift */,
 			);
 			path = HealthApp;
 			sourceTree = "<group>";

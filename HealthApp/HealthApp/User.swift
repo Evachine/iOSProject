@@ -15,6 +15,7 @@ class User {
     var workoutPlan: String?
     var email: String?
     var password: String?
+    var workoutsCompleted: Int = 0
     
     init(firstName: String, lastName: String, workoutPlan: String, email: String, password: String) {
         self.firstName = firstName
@@ -37,6 +38,5 @@ class User {
             "password" : password
         ]
     }
-    
     
 }
