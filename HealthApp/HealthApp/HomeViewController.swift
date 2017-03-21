@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 
 class HomeViewController: UIViewController {
@@ -14,20 +17,32 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var currentDayLabel: UILabel!
     
     var currentDayOfTheWeek : String = ""
+   
+   var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         getDayOfWeek()
         currentDayLabel.text = currentDayOfTheWeek
+      
+      if(currentUser != nil) {
+         print("We have a user!")
+         print("name is: \(currentUser?.firstName!)")
+         print("ftp is: \(currentUser?.ftp!)")
+         print("# workouts completed is: \(currentUser?.workoutsCompleted!)")
+      }
+      else {
+         //setCurrentUserInfo()
+      }
     }
-    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+   
+   
     func getDayOfWeek() {
         /* let todayDate = NSDate()
          let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier(rawValue: NSGregorianCalendar))

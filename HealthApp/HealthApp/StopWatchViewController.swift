@@ -27,6 +27,12 @@ class StopWatchViewController: UIViewController {
     @IBOutlet weak var stopwatchLabel: UILabel!
     @IBOutlet weak var startPauseButton: UIButton!
     @IBOutlet weak var ResetButton: UIButton!
+   
+   
+   
+   @IBAction func workoutIsCompleted(_ sender: UIButton) {
+      currentUser?.workoutsCompleted = (currentUser?.workoutsCompleted)! + 1
+   }
     
     
     @IBAction func startPause(_ sender: Any) {

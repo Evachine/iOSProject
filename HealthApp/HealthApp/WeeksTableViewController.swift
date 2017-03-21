@@ -57,7 +57,14 @@ class WeeksTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
+      if (currentUser != nil) {
+         print("We have a user")
+      }
+      else {
+         print("no user")
+      }
+      
         for day in 0...6 {
             // get user daysCompleted
             if let url = URL(string: "http://www.73summits.com/ergdb/api/workout/3198/80/json") {

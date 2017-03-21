@@ -12,30 +12,29 @@ class User {
     
     var firstName: String?
     var lastName: String?
-    var workoutPlan: String?
+    var ftp: Int?
     var email: String?
-    var password: String?
-    var workoutsCompleted: Int = 0
+    var workoutsCompleted: Int?
     
-    init(firstName: String, lastName: String, workoutPlan: String, email: String, password: String) {
+   init(firstName: String, lastName: String, ftp: Int, email: String, workoutsCompleted: Int) {
         self.firstName = firstName
         self.lastName = lastName
-        self.workoutPlan = workoutPlan
+        self.ftp = ftp
         self.email = email
-        self.password = password
+      self.workoutsCompleted = workoutsCompleted
     }
     
-    convenience init(firstName: String, workoutPlan: String, email: String, password: String) {
-        self.init(firstName: firstName, lastName: "", workoutPlan: workoutPlan, email: email, password: password)
+   convenience init(firstName: String, ftp: Int, email: String, workoutsCompleted: Int) {
+      self.init(firstName: firstName, lastName: "", ftp: ftp, email: email, workoutsCompleted: workoutsCompleted)
     }
     
     func toAnyObject() -> Any {
         return [
             "firstName": firstName,
             "lastName": lastName,
-            "workoutPlan": workoutPlan,
+            "ftp": ftp,
             "email" : email,
-            "password" : password
+            "workoutsCompleted": workoutsCompleted
         ]
     }
     
