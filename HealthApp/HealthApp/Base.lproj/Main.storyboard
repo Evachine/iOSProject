@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5le-iV-Stk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5le-iV-Stk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -522,7 +522,7 @@
                                 <accessibility key="accessibilityConfiguration" label="Back to Login"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Back to Login">
-                                    <color key="titleColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.73250966839999998" green="0.73250966839999998" blue="0.73250966839999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="5le-iV-Stk" eventType="touchUpInside" id="x3C-VE-yvw"/>
@@ -553,7 +553,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="What's FTP?">
-                                    <color key="titleColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.73250966839999998" green="0.73250966839999998" blue="0.73250966839999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="9kO-TR-3aZ" kind="show" identifier="showFTPWebInfo" id="eXs-co-7zA"/>
@@ -665,7 +665,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gBV-Er-3T8" firstAttribute="top" secondItem="AwA-ac-4z1" secondAttribute="bottom" id="HCF-dK-HR7"/>
+                            <constraint firstItem="gBV-Er-3T8" firstAttribute="top" secondItem="AwA-ac-4z1" secondAttribute="bottom" constant="15" id="HCF-dK-HR7"/>
                             <constraint firstItem="gBV-Er-3T8" firstAttribute="trailing" secondItem="jkv-Rb-Ooi" secondAttribute="trailingMargin" constant="10" id="Lmu-X7-7Nn"/>
                             <constraint firstItem="u1E-aC-VZP" firstAttribute="top" secondItem="gBV-Er-3T8" secondAttribute="bottom" id="WQA-MR-H4V"/>
                             <constraint firstItem="gBV-Er-3T8" firstAttribute="leading" secondItem="jkv-Rb-Ooi" secondAttribute="leadingMargin" constant="10" id="XKh-5k-Kek"/>
@@ -707,7 +707,7 @@
         <image name="Workout" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dAr-7c-lVT"/>
+        <segue reference="iVT-cu-jVF"/>
         <segue reference="8ZS-Wm-EEg"/>
     </inferredMetricsTieBreakers>
 </document>

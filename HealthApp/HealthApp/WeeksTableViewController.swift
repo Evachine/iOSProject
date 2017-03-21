@@ -69,6 +69,10 @@ class WeeksTableViewController: UITableViewController {
         //for day in num...num + 6 {
         //for day in 0...6 {
         // get user daysCompleted
+      
+      
+    //  DispatchQueue.main.async {
+      
         if let url = URL(string: "http://www.73summits.com/ergdb/api/list/json") {
             let session = URLSession.shared
             let download = session.dataTask(with: url) {
@@ -103,6 +107,7 @@ class WeeksTableViewController: UITableViewController {
             download.resume()
         }
         
+      //}
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         

@@ -78,7 +78,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 self.email = "test_user@email.com"
                 self.password = "password"
-                
+               
+               self.tryToSignInWithInfo()
+               
                
             }else {
                
@@ -131,15 +133,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    
    @IBAction func loginButtonPressed(_ sender: UIButton) {
       
-      if (emailText.text != nil && email == "") {
+      if (emailText.text != nil) {
          email = emailText.text
       }
       
-      if (passwordText.text != nil && password == "") {
+      if (passwordText.text != nil) {
          password = passwordText.text
       }
       
-      FIRAuth.auth()?.signIn(withEmail: email!, password: password!) { (user, error) in
+      tryToSignInWithInfo()
+      
+     /* FIRAuth.auth()?.signIn(withEmail: email!, password: password!) { (user, error) in
          
          if let user = user {
            
@@ -191,8 +195,65 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
          }
-      }
+      }*/
       
+   }
+   
+   func tryToSignInWithInfo () {
+      FIRAuth.auth()?.signIn(withEmail: email!, password: password!) { (user, error) in
+         
+         if let user = user {
+            
+            user.getTokenWithCompletion({ (token, error) in
+               // let idToken? = token  // ID token, which you can safely send to a backend
+            })
+            
+            let userID = FIRAuth.auth()?.currentUser?.uid
+            self.ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+               // Get user value
+               
+               currentUserId = Int(userID!) // set the current user ID, a global
+               
+               let value = snapshot.value as? NSDictionary
+               //print(value)
+               
+               self.firstName = value?["firstName"] as! String
+               self.lastName = value?["lastName"] as! String
+               
+               var ftpString = value?["ftp"] as! Int32
+               self.ftp = Int(ftpString)
+               
+               
+               var workoutsCompletedString = value?["workoutsCompleted"] as! Int32
+               self.workoutsCompleted = Int(workoutsCompletedString)
+               
+               
+               currentUser = User(firstName: self.firstName!, lastName: self.lastName!, ftp: self.ftp!, email: self.email!, workoutsCompleted: self.workoutsCompleted!)
+               
+               
+               self.performSegue(withIdentifier: "loginIsPressed", sender: self)
+               
+               // ...
+            }) { (error) in
+               print(error.localizedDescription)
+            }
+            
+            
+            
+         }
+         else {
+            let alertController = UIAlertController(title: "Oops!", message: "Invalid email/password combination", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+            {
+               (result : UIAlertAction) -> Void in
+               //print("You pressed OK")
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+         }
+      }
+
    }
    
    
