@@ -11,7 +11,7 @@ import UIKit
 class WeeksTableViewController: UITableViewController {
     
     var workouts: [String : String] = [:]
-    var workoutId : Int? = 0
+    var workoutId: Int? = 0
     
     func getDayOfWeekString(i: Int) -> String {
         
@@ -19,18 +19,27 @@ class WeeksTableViewController: UITableViewController {
         
         if(i == 2){
             dayOfTheWeek = "MONDAY";
-        } else if (i==3){
+        }
+        else if (i==3){
             dayOfTheWeek = "TUESDAY";
-        } else if (i==4){
+        }
+        else if (i==4){
             dayOfTheWeek = "WEDNESDAY";
-        } else if (i==5){
+        }
+        else if (i==5){
             dayOfTheWeek = "THURSDAY";
-        } else if (i==6){
+        }
+        else if (i==6){
             dayOfTheWeek = "FRIDAY";
-        } else if (i==7){
+        }
+        else if (i==7){
             dayOfTheWeek = "SATURDAY";
-        } else if (i==1){
+        }
+        else if (i==1){
             dayOfTheWeek = "SUNDAY";
+        }
+        else {
+            print("FRICK")
         }
         
         return dayOfTheWeek
@@ -57,26 +66,27 @@ class WeeksTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-      if (currentUser != nil) {
-         print("We have a user")
-      }
-      else {
-         print("no user")
-      }
-      
-        for day in 0...6 {
+        
+        if (currentUser != nil) {
+            print("We have a user")
+        }
+        else {
+            print("no user")
+        }
+        
+        let num = Int((currentUser?.workoutsCompleted)!) + 2
+        for day in num...num + 6 {
             // get user daysCompleted
-            if let url = URL(string: "http://www.73summits.com/ergdb/api/workout/3198/80/json") {
+            if let url = URL(string: "http://www.73summits.com/ergdb/api/list/json") {
                 let session = URLSession.shared
                 let download = session.dataTask(with: url) {
                     (data: Data?, response: URLResponse?, error: Error?) -> Void in
                     
                     if let data = data {
-                        let json = JSON(data:data)
+                        let json = JSON(data: data)
                         print("JSON")
                         print(json)
-                        print("----")
+                        print("---")
                         
                         DispatchQueue.main.async {
                             [weak self] in
@@ -150,8 +160,8 @@ class WeeksTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let workoutVC = segue.destination as? WorkoutDisplayViewController {
-            workoutVC.workoutId = self.workoutId
+        if let workoutVC = segue.destination as? DisplayWorkoutViewController {
+            workoutVC.workoutId = self.workoutId!
         }
     }
     

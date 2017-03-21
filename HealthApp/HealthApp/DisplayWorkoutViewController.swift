@@ -1,5 +1,5 @@
 //
-//  WorkoutDisplayViewController.swift
+//  DisplayWorkoutViewController.swift
 //  HealthApp
 //
 //  Created by Evan Joseph Hench on 3/20/17.
@@ -11,14 +11,13 @@ import FirebaseAuth
 import FirebaseDatabase
 import UIKit
 
-
-class WorkoutDisplayViewController: UIViewController {
+class DisplayWorkoutViewController: UIViewController {
+    
+    var ref : FIRDatabaseReference!
+    var workoutId: Int? = 0
     
     @IBOutlet weak var workoutContents: UITextView!
     @IBOutlet weak var workoutTitle: UILabel!
-    
-    var workoutId : Int = 0
-    var ref : FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +27,7 @@ class WorkoutDisplayViewController: UIViewController {
             let _ = snapshot.value as? [String : AnyObject] ?? [:]
             
             self.workoutId = (currentUser?.workoutsCompleted)! + 2
-            let urlString1 = "http://www.73summits.com/ergdb/api/workout/" + String(self.workoutId)
+            let urlString1 = "http://www.73summits.com/ergdb/api/workout/" + String(self.workoutId!)
             //let urlString2 = "/" + String((currentUser?.ftp)!) + "/json"
             let urlString2 = "/80/json"
             let urlString3 = String(urlString1 + urlString2)!
@@ -41,9 +40,6 @@ class WorkoutDisplayViewController: UIViewController {
                     
                     if let data = data {
                         let json = JSON(data:data)
-                        print("JSON")
-                        print(json)
-                        print("---")
                         
                         DispatchQueue.main.async {
                             [weak self] in
@@ -64,6 +60,7 @@ class WorkoutDisplayViewController: UIViewController {
                                     this.workoutContents!.text = this.workoutContents!.text + String(interval) + " minutes at " + String(Int(ftp)) + String("W\n")
                                 }
                             }
+                            //self.tableView.reloadData()
                         }
                     }
                 }

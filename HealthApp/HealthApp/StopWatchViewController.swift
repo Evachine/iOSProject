@@ -6,6 +6,10 @@
 //  Copyright © 2017 Emily K. Nguyen. All rights reserved.
 //
 
+import Firebase
+import FirebaseAuthUI
+import FirebaseAuth
+import FirebaseDatabase
 import UIKit
 
 class StopWatchViewController: UIViewController {
@@ -17,6 +21,8 @@ class StopWatchViewController: UIViewController {
     var startPauseWatch: Bool = true
     var stopwatchString = ""
     
+    var ref : FIRDatabaseReference!
+    
     // Links to potentially fix our timer issues:
     //
     // http://stackoverflow.com/questions/35496203/nstimer-too-slow
@@ -27,12 +33,12 @@ class StopWatchViewController: UIViewController {
     @IBOutlet weak var stopwatchLabel: UILabel!
     @IBOutlet weak var startPauseButton: UIButton!
     @IBOutlet weak var ResetButton: UIButton!
-   
-   
-   
-   @IBAction func workoutIsCompleted(_ sender: UIButton) {
-      currentUser?.workoutsCompleted = (currentUser?.workoutsCompleted)! + 1
-   }
+    
+    
+    @IBAction func workoutIsCompleted(_ sender: UIButton) {
+        currentUser?.workoutsCompleted = (currentUser?.workoutsCompleted)! + 1
+        self.ref.child("users/" + ((FIRAuth.auth()?.currentUser?.uid)!) + "/workoutsCompleted").setValue((currentUser?.workoutsCompleted)!)
+    }
     
     
     @IBAction func startPause(_ sender: Any) {
@@ -91,6 +97,8 @@ class StopWatchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.ref = FIRDatabase.database().reference()
         
         // Do any additional setup after loading the view.
         

@@ -6,12 +6,13 @@
 //  Copyright © 2017 Emily K. Nguyen. All rights reserved.
 //
 
-import UIKit
 import Firebase
 import FirebaseAuth
+import UIKit
+
 
 class UserProfileViewController: UITableViewController {
-   var workoutInfo = ["FTP: ", "Workouts Completed: "]
+    var workoutInfo = ["FTP: ", "Workouts Completed: "]
     
     var profileInfo = ["Name: ", "Email: "]
     var logoutOk = true
@@ -19,19 +20,19 @@ class UserProfileViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-      
-      tableView.reloadData()
+        
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
-   @IBAction func saveToProfileViewController (segue:UIStoryboardSegue) {
-      tableView.reloadData()
-      
-   }
+    
+    @IBAction func saveToProfileViewController (segue:UIStoryboardSegue) {
+        tableView.reloadData()
+        
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -54,35 +55,35 @@ class UserProfileViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      
-      var displayInfo = ""
-      
+        
+        var displayInfo = ""
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         
         if (indexPath.section == 0) {
-         
-         if (indexPath.row == 0) {
-            displayInfo = String(describing: (currentUser?.ftp!)!)
-         }
-         else {
-             displayInfo = String(describing: (currentUser?.workoutsCompleted!)!)
             
-            cell.selectionStyle = .none
-         }
-         
+            if (indexPath.row == 0) {
+                displayInfo = String(describing: (currentUser?.ftp!)!)
+            }
+            else {
+                displayInfo = String(describing: (currentUser?.workoutsCompleted!)!)
+                
+                cell.selectionStyle = .none
+            }
+            
             cell.textLabel?.text = workoutInfo[indexPath.row] + displayInfo
         }
         
         if (indexPath.section == 1) {
-         cell.selectionStyle = .none
-
-         if (indexPath.row == 0) {
-            displayInfo = (currentUser?.firstName)! + " " + (currentUser?.lastName)!
-         }
-         else {
-            displayInfo = (currentUser?.email)!
-         }
-         
+            cell.selectionStyle = .none
+            
+            if (indexPath.row == 0) {
+                displayInfo = (currentUser?.firstName)! + " " + (currentUser?.lastName)!
+            }
+            else {
+                displayInfo = (currentUser?.email)!
+            }
+            
             cell.textLabel?.text = profileInfo[indexPath.row] + displayInfo
             
         }
@@ -92,20 +93,20 @@ class UserProfileViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
-      if (indexPath.section == 0 && indexPath.row == 0) {
-         performSegue(withIdentifier: "editingFTP", sender: self)
-      }
-
-   }
-   
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if (segue.identifier == "editingFTP") {
-         if let editingVC = segue.destination as? FTPEditTableViewController {
-            editingVC.shownFTP = currentUser?.ftp
-         }
-      }
-   }
+        
+        if (indexPath.section == 0 && indexPath.row == 0) {
+            performSegue(withIdentifier: "editingFTP", sender: self)
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "editingFTP") {
+            if let editingVC = segue.destination as? FTPEditTableViewController {
+                editingVC.shownFTP = currentUser?.ftp
+            }
+        }
+    }
     
     @IBAction func logoutUser(_ sender: UIBarButtonItem) {
         

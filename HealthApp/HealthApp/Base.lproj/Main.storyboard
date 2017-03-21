@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5le-iV-Stk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5le-iV-Stk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,7 +43,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Week's Workouts" id="Vuf-MC-W7V"/>
                     <connections>
-                        <segue destination="q0l-oO-NLa" kind="show" identifier="displayWorkout" id="Bpp-ah-JUu"/>
+                        <segue destination="m8l-qU-0a5" kind="show" identifier="displayWorkout" id="bpj-Rz-ZrA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLa-DJ-53S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -569,7 +569,7 @@
                         <viewControllerLayoutGuide type="bottom" id="u1E-aC-VZP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jkv-Rb-Ooi">
-                        <rect key="frame" x="0.0" y="0.0" width="359" height="456"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="407"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title of today's workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfA-x3-gfX">
@@ -598,7 +598,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OoW-XO-Gej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2901.5999999999999" y="-269.86506746626691"/>
+            <point key="canvasLocation" x="3887" y="-327"/>
+        </scene>
+        <!--Display Workout View Controller-->
+        <scene sceneID="Skb-gH-3LO">
+            <objects>
+                <viewController id="m8l-qU-0a5" customClass="DisplayWorkoutViewController" customModule="HealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iKj-Xv-PMg"/>
+                        <viewControllerLayoutGuide type="bottom" id="OxX-SK-8B7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D3H-8q-GZ4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title of today's workout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5y-l4-uSj">
+                                <rect key="frame" x="24" y="72" width="327" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.4705047624" green="0.83217005079999995" blue="0.65018378509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQT-Wr-Dl8">
+                                <rect key="frame" x="24" y="118" width="327" height="492"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="workoutContent" destination="NQT-Wr-Dl8" id="Gwt-2V-b7m"/>
+                        <outlet property="workoutContents" destination="NQT-Wr-Dl8" id="yDN-AW-ZFH"/>
+                        <outlet property="workoutTitle" destination="t5y-l4-uSj" id="5Dm-0k-xV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DsV-6Q-gL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2789.5999999999999" y="-210.04497751124438"/>
         </scene>
     </scenes>
     <resources>
@@ -610,6 +651,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dAr-7c-lVT"/>
-        <segue reference="dv2-PN-HSj"/>
+        <segue reference="kYj-0m-Gra"/>
     </inferredMetricsTieBreakers>
 </document>
