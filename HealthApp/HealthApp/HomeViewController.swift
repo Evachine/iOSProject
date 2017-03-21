@@ -26,16 +26,7 @@ class HomeViewController: UIViewController {
         getDayOfWeek()
         currentDayLabel.text = currentDayOfTheWeek
       
-      if(currentUser != nil) {
-         print("We have a user!")
-         print("name is: \(currentUser?.firstName!)")
-         print("ftp is: \(currentUser?.ftp!)")
-         print("# workouts completed is: \(currentUser?.workoutsCompleted!)")
-      }
-      else {
-         //setCurrentUserInfo()
-      }
-    }
+   }
    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -44,16 +35,10 @@ class HomeViewController: UIViewController {
    
    
     func getDayOfWeek() {
-        /* let todayDate = NSDate()
-         let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier(rawValue: NSGregorianCalendar))
-         let myComponents = myCalendar?.components(.CalendarUnitW, fromDate: todayDate)
-         let weekDay = myComponents?.weekday
-         */
-        
+      
         let todaysDate = Date()
         let calendar = Calendar.current
         
-        print("Today's date: \(todaysDate)")
         var todayDateComponents = DateComponents()
         todayDateComponents.day = calendar.component(.day, from: todaysDate)
         todayDateComponents.month = calendar.component(.month, from: todaysDate)
@@ -66,9 +51,7 @@ class HomeViewController: UIViewController {
             currentDayOfTheWeek = weekdayString
             print(weekdayString) // 5, which corresponds to Thursday in the Gregorian Calendar
         }
-        
-        //  return weekDay
-    }
+   }
     
     func getDayOfWeekString(i: Int) -> String {
         

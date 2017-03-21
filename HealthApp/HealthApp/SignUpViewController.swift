@@ -98,8 +98,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
    }
    
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      currentUser = User(firstName: self.firstName, lastName: self.lastName, ftp: self.ftp!, email: self.email, workoutsCompleted: 0)
+      
+      if (segue.identifier == "doneSigningUpPressed") {
+         currentUser = User(firstName: self.firstName, lastName: self.lastName, ftp: self.ftp!, email: self.email, workoutsCompleted: 0)
+      }
+      
+      if (segue.identifier == "showFTPWebInfo") {
+         
+         if let ftpWebNav = segue.destination as? UINavigationController {
+            if let webInfoVC = ftpWebNav.topViewController as? WebViewController {
+               
+               webInfoVC.url = "https://decaironman-training.com/2013/12/09/powerlevels-ftp-pros-vs-humans/comment-page-1/" 
+            }
+         }
+         
+         
+      }
+      
 
+   }
+   
+   @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
+      
    }
    
    @IBAction func doneSigningUpPressed(_ sender: UIButton) {

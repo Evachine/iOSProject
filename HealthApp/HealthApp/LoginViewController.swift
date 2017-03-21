@@ -11,6 +11,8 @@ import FirebaseAuth
 import Firebase
 import FirebaseDatabase
 
+import LocalAuthentication // touchID stuff
+
 var currentUserId: Int?
 var currentUser: User?
 
@@ -48,23 +50,75 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       // Dispose of any resources that can be recreated.
    }
    
+   @IBAction func loginWithTouch(_ sender: Any) {
+      
+      // create Authentication Context
+      let authenticationContext = LAContext()
+      
+      var error:NSError?
+      
+      // check for fingerprint sensor
+      // If not, show the user an alert view and bail out!
+      guard authenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
+         showAlertViewIfNoSensor()
+         return
+      }
+      
+      // 3. Check the fingerprint
+      authenticationContext.evaluatePolicy(
+         .deviceOwnerAuthenticationWithBiometrics,
+         localizedReason: "For my eyes only!",
+         reply: { [unowned self] (success, error) -> Void in
+            
+            if( success ) {
+               
+               // Fingerprint recognized
+               // TODO: Go to view controller
+               print("yay fingerprint worked!")
+               
+            }else {
+               
+              
+                  self.showAlertViewIfFingerprintIsWrong()
+               
+            }
+            
+      })
+      
+   
+   }
+   
+   func showAlertViewIfFingerprintIsWrong(){
+      
+      showAlertWithTitle(title: "Error", message: "Unable to identify fingerprint.")
+      
+   }
+   
+   func showAlertViewIfNoSensor(){
+      
+      showAlertWithTitle(title: "Error", message: "This device does not have a TouchID sensor.")
+      
+   }
+   
+   func showAlertWithTitle( title:String, message:String ) {
+      
+      let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+      
+      let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+      alertVC.addAction(okAction)
+      
+      DispatchQueue.main.async {
+         self.present(alertVC, animated: true, completion: nil)
+
+      }
+
+   }
+   
    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
       return true
    }
    
    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-      /*  if (textField == emailText) {
-       //print("Email: \(textField.text)")
-       
-       email = textField.text!
-       }
-       
-       if (textField == passwordText) {
-       //  print("PW: \(textField.text)")
-       
-       password = textField.text!
-       }
-       */
       textField.resignFirstResponder()
       
       return true
@@ -81,16 +135,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
          password = passwordText.text
       }
       
-      print("Email: \(email!)")
-      print("Password: \(password!)")
-      
       FIRAuth.auth()?.signIn(withEmail: email!, password: password!) { (user, error) in
          
          if let user = user {
-            let uid = user.uid  // Unique ID, which you can use to identify the user on the client side
-            
-            let email = user.email
-            let photoURL = user.photoURL
+           
             user.getTokenWithCompletion({ (token, error) in
                // let idToken? = token  // ID token, which you can safely send to a backend
             })
@@ -103,7 +151,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                
                let value = snapshot.value as? NSDictionary
                print(value)
-              // let workoutsCompleted = value?["workoutsCompleted"] as? Int ?? -1
                
                self.firstName = value?["firstName"] as! String
                self.lastName = value?["lastName"] as! String
@@ -115,8 +162,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                var workoutsCompletedString = value?["workoutsCompleted"] as! Int32
                self.workoutsCompleted = Int(workoutsCompletedString)
                
- 
-               print("workoutsCompleted: \(self.workoutsCompleted!)")
                
                currentUser = User(firstName: self.firstName!, lastName: self.lastName!, ftp: self.ftp!, email: self.email!, workoutsCompleted: self.workoutsCompleted!)
                
@@ -144,9 +189,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
          }
       }
       
-      // TODO: Add functionality!
-      
-      
    }
    
    
@@ -164,35 +206,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if (segue.identifier == "loginIsPressed") {
-         print("setting everything up")
-         // currentUser = User(firstName: self.firstName!, lastName: self.lastName!, ftp: self.ftp!, email: self.email!, workoutsCompleted: self.workoutsCompleted!)currentUser = User(firstName: self.firstName!, lastName: self.lastName!, ftp: self.ftp!, email: self.email!, workoutsCompleted: self.workoutsCompleted!)
-      }
       
     }
    
    
    
-   // Firebase stuff:
-   
-   //To create a new user with the passed in info:
-   
-   /*FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
-    // ...
-    }
-    
-    
-    // To sign in:
-    FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
-    // ...
-    }
-    
-    // To sign out:
-    
-    let firebaseAuth = FIRAuth.auth()
-    do {
-    try firebaseAuth?.signOut()
-    } catch let signOutError as NSError {
-    print ("Error signing out: %@", signOutError)
-    }*/
-}
+   }
