@@ -25,6 +25,9 @@ class FTPEditTableViewController: UITableViewController {
         self.ref = FIRDatabase.database().reference()
         
         ftpDisplayText.text = String(shownFTP!)
+      
+         tableView.tableFooterView = UIView()
+
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,7 +44,6 @@ class FTPEditTableViewController: UITableViewController {
     // update FTP
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "saveToProfile") {
-            print("saving")
             currentUser?.ftp = Int(ftpDisplayText.text!)
             self.ref.child("users/" + ((FIRAuth.auth()?.currentUser?.uid)!) + "/ftp").setValue((currentUser?.ftp)!)
         }

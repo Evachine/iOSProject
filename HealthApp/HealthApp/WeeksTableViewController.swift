@@ -67,13 +67,7 @@ class WeeksTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (currentUser != nil) {
-            print("We have a user")
-        }
-        else {
-            print("no user")
-        }
-        
+   
         let num = Int((currentUser?.workoutsCompleted)!) + 2
         for day in num...num + 6 {
             // get user daysCompleted

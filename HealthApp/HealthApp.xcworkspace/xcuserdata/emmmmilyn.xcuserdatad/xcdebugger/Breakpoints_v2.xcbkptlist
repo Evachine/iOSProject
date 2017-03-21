@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HealthApp/SignUpViewController.swift"
-            timestampString = "511750307.112305"
+            timestampString = "511773719.006048"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "doneSigningUpPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
