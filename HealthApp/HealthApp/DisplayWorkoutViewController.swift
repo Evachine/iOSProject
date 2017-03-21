@@ -27,13 +27,12 @@ class DisplayWorkoutViewController: UIViewController {
             let _ = snapshot.value as? [String : AnyObject] ?? [:]
             
             self.workoutId = (currentUser?.workoutsCompleted)! + 2
-            let urlString1 = "http://www.73summits.com/ergdb/api/workout/" + String(self.workoutId!)
-            //let urlString2 = "/" + String((currentUser?.ftp)!) + "/json"
-            let urlString2 = "/80/json"
-            let urlString3 = String(urlString1 + urlString2)!
-            print(urlString3)
-            print("http://www.73summits.com/ergdb/api/workout/3198/80/json")
-            if let url = URL(string: urlString3) {
+//            let urlString1 = "http://www.73summits.com/ergdb/api/workout/" + String(self.workoutId!)
+//            let urlString2 = "/" + String((currentUser?.ftp)!) + "/json"
+//            let urlString3 = String(urlString1 + urlString2)!
+//            print(urlString3)
+//            print("http://www.73summits.com/ergdb/api/workout/3198/80/json")
+            if let url = URL(string: "http://www.73summits.com/ergdb/api/workout/3198/80/json") {
                 let session = URLSession.shared
                 let download = session.dataTask(with: url) {
                     (data: Data?, response: URLResponse?, error: Error?) -> Void in

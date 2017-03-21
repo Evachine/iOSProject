@@ -74,7 +74,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                
                // Fingerprint recognized
                // TODO: Go to view controller
-               print("yay fingerprint worked!")
+               //print("yay fingerprint worked!")
+                
+                self.email = "test_user@email.com"
+                self.password = "password"
+                
                
             }else {
                
@@ -127,11 +131,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    
    @IBAction func loginButtonPressed(_ sender: UIButton) {
       
-      if (emailText.text != nil) {
+      if (emailText.text != nil && email == "") {
          email = emailText.text
       }
       
-      if passwordText.text != nil {
+      if (passwordText.text != nil && password == "") {
          password = passwordText.text
       }
       
@@ -150,7 +154,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                currentUserId = Int(userID!) // set the current user ID, a global
                
                let value = snapshot.value as? NSDictionary
-               print(value)
+               //print(value)
                
                self.firstName = value?["firstName"] as! String
                self.lastName = value?["lastName"] as! String
@@ -182,7 +186,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
             {
                (result : UIAlertAction) -> Void in
-               print("You pressed OK")
+               //print("You pressed OK")
             }
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)

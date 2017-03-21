@@ -10,7 +10,7 @@ import UIKit
 
 class WeeksTableViewController: UITableViewController {
     
-    var workouts: [String : String] = [:]
+    var workouts: [Int : String] = [:]
     var workoutId: Int? = 0
     
     func getDayOfWeekString(i: Int) -> String {
@@ -38,9 +38,6 @@ class WeeksTableViewController: UITableViewController {
         else if (i==1){
             dayOfTheWeek = "SUNDAY";
         }
-        else {
-            print("FRICK")
-        }
         
         return dayOfTheWeek
     }
@@ -50,7 +47,7 @@ class WeeksTableViewController: UITableViewController {
         let calendar = Calendar.current
         var weekday = 0
         
-        print("Today's date: \(todaysDate)")
+        //print("Today's date: \(todaysDate)")
         var todayDateComponents = DateComponents()
         todayDateComponents.day = calendar.component(.day, from: todaysDate)
         todayDateComponents.month = calendar.component(.month, from: todaysDate)
@@ -67,48 +64,43 @@ class WeeksTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-   
-        let num = Int((currentUser?.workoutsCompleted)!) + 2
-        for day in num...num + 6 {
-            // get user daysCompleted
-            if let url = URL(string: "http://www.73summits.com/ergdb/api/list/json") {
-                let session = URLSession.shared
-                let download = session.dataTask(with: url) {
-                    (data: Data?, response: URLResponse?, error: Error?) -> Void in
-                    
+        
+        //let num = Int((currentUser?.workoutsCompleted)!) + 2
+        //for day in num...num + 6 {
+        //for day in 0...6 {
+        // get user daysCompleted
+        if let url = URL(string: "http://www.73summits.com/ergdb/api/list/json") {
+            let session = URLSession.shared
+            let download = session.dataTask(with: url) {
+                (data: Data?, response: URLResponse?, error: Error?) -> Void in
+                
+                for day in 0...6 {
                     if let data = data {
                         let json = JSON(data: data)
-                        print("JSON")
-                        print(json)
-                        print("---")
+                        let workout = json.array![day]["id"]
+                        //print("id: " + String(workout))
                         
                         DispatchQueue.main.async {
                             [weak self] in
                             guard let this = self else { return }
-                            let arr = json.array!
-                            var inputString = ""
                             
-                            // keep in mind that the first workout is id == 2 on ErgDB
-                            for index in 0...arr.count - 1 {
-                                if (1 != index && index % 2 == 0) {
-                                    let point1 = arr[index]
-                                    let point2 = arr[index + 1]
-                                    
-                                    let interval = Int(point2[0].rawString()!)! - Int(point1[0].rawString()!)!
-                                    let percent = Int(point1[1].rawString()!)!
-                                    
-                                    inputString = inputString + String(interval) + "\tminutes at " + String(percent) + String("%\tof your FTP\n")
-                                }
+                            var temp = (this.getDayOfWeek() + day) % 7
+                            if 0 == temp {
+                                temp = 7
                             }
-                            
-                            let key = this.getDayOfWeekString(i: this.getDayOfWeek() + day)
-                            this.workouts[key] = inputString
+                            let value = this.getDayOfWeekString(i: temp)
+                            this.workouts[day] = value
+                            print("day: " + String(day) + ", value: " + value)
                         }
                     }
                 }
                 
-                download.resume()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
+            
+            download.resume()
         }
         
         // Uncomment the following line to preserve selection between presentations
@@ -123,25 +115,28 @@ class WeeksTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 7
+        return workouts.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell", for: indexPath)
         
-        let key = self.getDayOfWeekString(i: self.getDayOfWeek() + indexPath.row)
-        cell.textLabel?.text = self.workouts[key]
-        
+        if (0 == indexPath.row) {
+            cell.textLabel?.text = "TODAY"
+        }
+        else if (1 == indexPath.row) {
+            cell.textLabel?.text = "TOMORROW"
+        }
+        else {
+            cell.textLabel?.text = self.workouts[indexPath.row]
+        }
+        print("indexPath.row: " + String(indexPath.row))
         
         return cell
     }
@@ -150,13 +145,15 @@ class WeeksTableViewController: UITableViewController {
         // workoutId = firebase.user.workoutsCompleted + 2 + IndexPath.row
         // set workoutId in WorkoutDisplayViewController to workoutId from here
         
-        performSegue(withIdentifier: "displayWorkout", sender: self)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "displayWorkout", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let workoutVC = segue.destination as? DisplayWorkoutViewController {
-            workoutVC.workoutId = self.workoutId!
-        }
+        //        if let workoutVC = segue.destination as? DisplayWorkoutViewController {
+        //            workoutVC.workoutId = self.workoutId!
+        //        }
     }
     
     

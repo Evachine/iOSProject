@@ -59,7 +59,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
          let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
          {
             (result : UIAlertAction) -> Void in
-            print("You pressed OK")
+            //print("You pressed OK")
          }
          alertController.addAction(okAction)
          self.present(alertController, animated: true, completion: nil)
@@ -151,7 +151,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                               
                               let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
                                  (result : UIAlertAction) -> Void in
-                                 print("You pressed OK")
+                                 //print("You pressed OK")
                               }
                               alertController.addAction(okAction)
                               self.present(alertController, animated: true, completion: nil)
@@ -173,7 +173,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         
                         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
                            (result : UIAlertAction) -> Void in
-                           print("You pressed OK")
+                           //print("You pressed OK")
                         }
                         alertController.addAction(okAction)
                         self.present(alertController, animated: true, completion: nil)
@@ -185,7 +185,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                      
                      let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
                         (result : UIAlertAction) -> Void in
-                        print("You pressed OK")
+                        //print("You pressed OK")
                      }
                      alertController.addAction(okAction)
                      self.present(alertController, animated: true, completion: nil)
@@ -197,7 +197,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                   
                   let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
                      (result : UIAlertAction) -> Void in
-                     print("You pressed OK")
+                     //print("You pressed OK")
                   }
                   alertController.addAction(okAction)
                   self.present(alertController, animated: true, completion: nil)
@@ -209,7 +209,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                
                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
                   (result : UIAlertAction) -> Void in
-                  print("You pressed OK")
+                  //print("You pressed OK")
                }
                alertController.addAction(okAction)
                self.present(alertController, animated: true, completion: nil)
@@ -221,7 +221,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
                (result : UIAlertAction) -> Void in
-               print("You pressed OK")
+               //print("You pressed OK")
             }
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
@@ -232,7 +232,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
          
          let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
             (result : UIAlertAction) -> Void in
-            print("You pressed OK")
+            //print("You pressed OK")
          }
          alertController.addAction(okAction)
          self.present(alertController, animated: true, completion: nil)

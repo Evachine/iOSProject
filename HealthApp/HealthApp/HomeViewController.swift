@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
             let weekday = gregorianCalendar.component(.weekday, from: date)
             let weekdayString = getDayOfWeekString(i: weekday)
             currentDayOfTheWeek = weekdayString
-            print(weekdayString) // 5, which corresponds to Thursday in the Gregorian Calendar
+            //print(weekdayString) // 5, which corresponds to Thursday in the Gregorian Calendar
         }
    }
     

@@ -19,12 +19,12 @@
 		6CB51B5B1E5394BB00EB40A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B5A1E5394BB00EB40A3 /* AppDelegate.swift */; };
 		6CB51B5D1E5394BB00EB40A3 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B5C1E5394BB00EB40A3 /* WorkoutViewController.swift */; };
 		6CB51B5F1E5394BB00EB40A3 /* SevenDaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B5E1E5394BB00EB40A3 /* SevenDaysViewController.swift */; };
-		6CB51B621E5394BB00EB40A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB51B601E5394BB00EB40A3 /* Main.storyboard */; };
 		6CB51B641E5394BB00EB40A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CB51B631E5394BB00EB40A3 /* Assets.xcassets */; };
 		6CB51B671E5394BB00EB40A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB51B651E5394BB00EB40A3 /* LaunchScreen.storyboard */; };
 		6CB51B721E5394BB00EB40A3 /* HealthAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B711E5394BB00EB40A3 /* HealthAppTests.swift */; };
 		6CB51B7D1E5394BB00EB40A3 /* HealthAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB51B7C1E5394BB00EB40A3 /* HealthAppUITests.swift */; };
 		6CEB65BF1E7E0BA9005F3E4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CEB65BE1E7E0BA9005F3E4A /* GoogleService-Info.plist */; };
+		A44117AF1E8191F100753E9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44117AD1E8191F100753E9A /* Main.storyboard */; };
 		A44BA7101E5D518B0005E47D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44BA70F1E5D518B0005E47D /* SignUpViewController.swift */; };
 		A45F91E91E802B1900557B08 /* WorkoutDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45F91E81E802B1900557B08 /* WorkoutDisplayViewController.swift */; };
 		A45F91EB1E80404700557B08 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45F91EA1E80404700557B08 /* SwiftyJSON.swift */; };
@@ -65,7 +65,6 @@
 		6CB51B5A1E5394BB00EB40A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CB51B5C1E5394BB00EB40A3 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		6CB51B5E1E5394BB00EB40A3 /* SevenDaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDaysViewController.swift; sourceTree = "<group>"; };
-		6CB51B611E5394BB00EB40A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6CB51B631E5394BB00EB40A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CB51B661E5394BB00EB40A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CB51B681E5394BB00EB40A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		8D77862B963C3D37A3BD1ED6 /* Pods-HealthAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthAppUITests/Pods-HealthAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9429B8950135BFDA5327FBF4 /* Pods-HealthApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthApp/Pods-HealthApp.release.xcconfig"; sourceTree = "<group>"; };
 		9A05C9E24BD967DBB5C3B635 /* Pods_HealthAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44117AE1E8191F100753E9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A44BA70F1E5D518B0005E47D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A45F91E81E802B1900557B08 /* WorkoutDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDisplayViewController.swift; sourceTree = "<group>"; };
 		A45F91EA1E80404700557B08 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -148,23 +148,23 @@
 			children = (
 				6CB51B5A1E5394BB00EB40A3 /* AppDelegate.swift */,
 				6CB51B631E5394BB00EB40A3 /* Assets.xcassets */,
+				A45F91EC1E80E25200557B08 /* DisplayWorkoutViewController.swift */,
+				6C9D88971E80B81C004B2F5C /* FTPEditTableViewController.swift */,
 				A47ABD7B1E5E472A00F30F91 /* HomeViewController.swift */,
-				6C98CB321E810B34000806A2 /* WebViewController.swift */,
 				6CB51B681E5394BB00EB40A3 /* Info.plist */,
 				6CB51B651E5394BB00EB40A3 /* LaunchScreen.storyboard */,
 				6C94B6081E53A12E00697D59 /* LoginViewController.swift */,
-				6CB51B601E5394BB00EB40A3 /* Main.storyboard */,
+				A44117AD1E8191F100753E9A /* Main.storyboard */,
 				6CB51B5E1E5394BB00EB40A3 /* SevenDaysViewController.swift */,
 				A44BA70F1E5D518B0005E47D /* SignUpViewController.swift */,
 				6C88AB601E714D9700174DD9 /* StopWatchViewController.swift */,
 				A45F91EA1E80404700557B08 /* SwiftyJSON.swift */,
 				6C2FEE881E79CE7000BA5EA3 /* User.swift */,
 				A47ABD7F1E5E4D9E00F30F91 /* UserProfileViewController.swift */,
+				6C98CB321E810B34000806A2 /* WebViewController.swift */,
 				6C88AB621E71D52F00174DD9 /* WeeksTableViewController.swift */,
 				A45F91E81E802B1900557B08 /* WorkoutDisplayViewController.swift */,
 				6CB51B5C1E5394BB00EB40A3 /* WorkoutViewController.swift */,
-				6C9D88971E80B81C004B2F5C /* FTPEditTableViewController.swift */,
-				A45F91EC1E80E25200557B08 /* DisplayWorkoutViewController.swift */,
 			);
 			path = HealthApp;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 				6CB51B671E5394BB00EB40A3 /* LaunchScreen.storyboard in Resources */,
 				6CEB65BF1E7E0BA9005F3E4A /* GoogleService-Info.plist in Resources */,
 				6CB51B641E5394BB00EB40A3 /* Assets.xcassets in Resources */,
-				6CB51B621E5394BB00EB40A3 /* Main.storyboard in Resources */,
+				A44117AF1E8191F100753E9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,20 +546,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6CB51B601E5394BB00EB40A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6CB51B611E5394BB00EB40A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6CB51B651E5394BB00EB40A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6CB51B661E5394BB00EB40A3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A44117AD1E8191F100753E9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A44117AE1E8191F100753E9A /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
